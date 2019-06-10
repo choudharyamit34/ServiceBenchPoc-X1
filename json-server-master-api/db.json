@@ -1,0 +1,83 @@
+{
+  "serviceJobs":[
+     {
+        "id":1,
+        "serviceJobNumber":"SJKL-1",
+        "serviceJobType":"W",
+        "serviceJobId":"SJ1",
+        "serviceJobDate":"23/06/2018",
+        "scheduledServiceJobDate":"21/06/2018",
+        "customerFirstName":"amit",
+        "customerLastName":"kumar",
+        "city":"pune",
+        "state":"MH",
+        "postalCode":"411057",
+        "addLine1":"Street 1",
+        "addLine2":"XYZ Road",
+        "addLine3":"Rahatani",
+        "mobilePhone":"8600041937",
+        "homePhone":"8600041937"
+     },
+     {
+        "id":2,
+        "serviceJobNumber":"SJKL-2",
+        "serviceJobType":"W",
+        "serviceJobId":"SJ2",
+        "serviceJobDate":"23/06/2018",
+        "scheduledServiceJobDate":"21/06/2018",
+        "customerFirstName":"amit",
+        "customerLastName":"kumar",
+        "city":"pune",
+        "state":"MH",
+        "postalCode":"411057",
+        "addLine1":"Street 1",
+        "addLine2":"XYZ Road",
+        "addLine3":"Rahatani",
+        "mobilePhone":"8600041937",
+        "homePhone":"8600041937"
+     },
+     {
+        "id":3,
+        "serviceJobNumber":"SJKL-3",
+        "serviceJobType":"W",
+        "serviceJobId":"SJ3",
+        "serviceJobDate":"23/06/2018",
+        "scheduledServiceJobDate":"21/06/2018",
+        "customerFirstName":"amit",
+        "customerLastName":"kumar",
+        "city":"pune",
+        "state":"MH",
+        "postalCode":"411057",
+        "addLine1":"Street 1",
+        "addLine2":"XYZ Road",
+        "addLine3":"Rahatani",
+        "mobilePhone":"8600041937",
+        "homePhone":"8600041937"
+     },
+     {
+        "id":4,
+        "serviceJobNumber":"SJKL-4",
+        "serviceJobType":"W",
+        "serviceJobId":"SJ4",
+        "serviceJobDate":"23/06/2018",
+        "scheduledServiceJobDate":"21/06/2018",
+        "customerFirstName":"amit",
+        "customerLastName":"kumar",
+        "city":"pune",
+        "state":"MH",
+        "postalCode":"411057",
+        "addLine1":"Street 1",
+        "addLine2":"XYZ Road",
+        "addLine3":"Rahatani",
+        "mobilePhone":"8600041937",
+        "homePhone":"8600041937"
+     }
+  ],
+  "claims":[
+     {
+        "id":1,
+        "body":"some comment",
+        "postId":1
+     }
+  ]
+}

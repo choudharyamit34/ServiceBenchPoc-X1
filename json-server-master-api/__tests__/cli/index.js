@@ -9,7 +9,7 @@ const mkdirp = require('mkdirp')
 const rimraf = require('rimraf')
 const serverReady = require('server-ready')
 
-let PORT = 3100
+let PORT = 3700
 
 const middlewareFiles = {
   en: './../../__fixtures__/middlewares/en.js',
@@ -35,14 +35,14 @@ describe('cli', () => {
   beforeEach(() => {
     dbFile = tempWrite.sync(
       JSON.stringify({
-        posts: [{ id: 1 }, { _id: 2 }],
-        comments: [{ id: 1, post_id: 1 }]
+        serviceJobs: [{ id: 1 }, { _id: 2 }],
+        claims: [{ id: 1, post_id: 1 }]
       }),
       'db.json'
     )
 
     routesFile = tempWrite.sync(
-      JSON.stringify({ '/blog/*': '/$1' }),
+      JSON.stringify({ '/serviceJobs/*': '/$1' }),
       'routes.json'
     )
 
@@ -61,7 +61,7 @@ describe('cli', () => {
     })
 
     test('should support JSON file', done => {
-      request.get('/posts').expect(200, done)
+      request.get('/serviceJobs').expect(200, done)
     })
 
     test('should send CORS headers', done => {
@@ -76,7 +76,7 @@ describe('cli', () => {
 
     test('should update JSON file', done => {
       request
-        .post('/posts')
+        .post('/serviceJobs')
         .send({ title: 'hello' })
         .end(() => {
           setTimeout(() => {
@@ -95,7 +95,7 @@ describe('cli', () => {
     })
 
     test('should support JS file', done => {
-      request.get('/posts').expect(200, done)
+      request.get('/serviceJobs').expect(200, done)
     })
   })
 
@@ -106,7 +106,7 @@ describe('cli', () => {
     })
 
     test('should support URL file', done => {
-      request.get('/posts').expect(200, done)
+      request.get('/serviceJobs').expect(200, done)
     })
   })
 
@@ -128,7 +128,7 @@ describe('cli', () => {
     })
 
     test('should use routes.json and _id as the identifier', done => {
-      request.get('/blog/posts/2').expect(200, done)
+      request.get('/serviceJobs/2').expect(200, done)
     })
 
     test('should use _id as foreignKeySuffix', async () => {
@@ -137,11 +137,11 @@ describe('cli', () => {
     })
 
     test('should apply middlewares', done => {
-      request.get('/blog/posts/2').expect('X-Hello', 'World', done)
+      request.get('/serviceJobs/2').expect('X-Hello', 'World', done)
     })
 
     test('should allow only GET requests', done => {
-      request.post('/blog/posts').expect(403, done)
+      request.post('/serviceJobs').expect(403, done)
     })
   })
 
@@ -167,7 +167,7 @@ describe('cli', () => {
 
     test('should have post body in middleware', done => {
       request
-        .post('/posts')
+        .post('/serviceJobs')
         .send({ name: 'test' })
         .expect('name', 'test', done)
     })
@@ -181,7 +181,7 @@ describe('cli', () => {
 
     test('should delay response', done => {
       const start = new Date()
-      request.get('/posts').expect(200, function(err) {
+      request.get('/serviceJobs').expect(200, function(err) {
         const end = new Date()
         done(end - start > 1000 ? err : new Error("Request wasn't delayed"))
       })
@@ -222,7 +222,7 @@ describe('cli', () => {
       const origin = 'http://example.com'
 
       request
-        .get('/posts')
+        .get('/serviceJobs')
         .set('Origin', origin)
         .expect(200)
         .end((err, res) => {
@@ -246,7 +246,7 @@ describe('cli', () => {
 
     test('should not set Content-Encoding to gzip', done => {
       request
-        .get('/posts')
+        .get('/serviceJobs')
         .expect(200)
         .end(function(err, res) {
           if (err) {
@@ -276,7 +276,7 @@ describe('cli', () => {
     test('should watch routes file', done => {
       fs.writeFileSync(routesFile, JSON.stringify({ '/api/*': '/$1' }))
       setTimeout(() => {
-        request.get('/api/posts').expect(200, done)
+        request.get('/api/serviceJobs').expect(200, done)
       }, 1000)
     })
   })
@@ -289,7 +289,7 @@ describe('cli', () => {
     })
 
     test("should create JSON file if it doesn't exist", done => {
-      request.get('/posts').expect(200, done)
+      request.get('/serviceJobs').expect(200, done)
     })
   })
 
