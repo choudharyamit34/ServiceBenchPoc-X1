@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Table from './components/table/Table';
+import ReactBootstrapTable from './components/table/ExtendedTable';
 
 class App extends Component {
     state = {
@@ -23,11 +24,14 @@ class App extends Component {
 
         return (
             <div className="container">
-                <h1>Welcome to Service Bench</h1>
-                <p>Below are the lastest Service Jobs</p>
-                <Table
+                <h2>Welcome to Service Bench</h2>
+               
+                {/* <Table
                     characterData={data}
-                />             
+                />  */}
+                 <ReactBootstrapTable
+                    data={data}
+                />                       
                 
             </div>
         );
