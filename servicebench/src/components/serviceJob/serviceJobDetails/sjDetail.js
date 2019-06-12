@@ -12,7 +12,7 @@ class SjDetail extends Component {
                 {/* <Table
                     characterData={data}
                 />  */}
-                 <ReactBootstrapTable
+                 <ServiceJobListTable
                     data={data}
                 />                       
                 

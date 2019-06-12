@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Table from './components/serviceJob/serviceJobList/Table';
-import ReactBootstrapTable from './components/serviceJob/serviceJobList/serviceJobListExtended';
+import ServiceJobListTable from './components/serviceJob/serviceJobList/serviceJobListTable';
 
 class App extends Component {
     state = {
@@ -29,7 +29,7 @@ class App extends Component {
                 {/* <Table
                     characterData={data}
                 />  */}
-                 <ReactBootstrapTable
+                 <ServiceJobListTable
                     data={data}                   
                 />                       
                 
