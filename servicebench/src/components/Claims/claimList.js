@@ -3,13 +3,13 @@ import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 
 const data =[];
-class ServiceJobListTable extends Component {
+class ClaimListTable extends Component {
     state = {
         data: []
     };
     
     componentDidMount() {
-        const url = "http://localhost:3007/ServiceJobs";
+        const url = "http://localhost:3007/Claims";
 
         fetch(url)
             .then(result => result.json())
@@ -31,7 +31,7 @@ class ServiceJobListTable extends Component {
     const { data } = this.state;
     console.log(data);
     const options = {
-      sizePerPage: 2,
+      sizePerPage: 10,
       prePage: 'Previous',
       nextPage: 'Next',
       firstPage: 'First',
@@ -55,25 +55,25 @@ class ServiceJobListTable extends Component {
                   pagination={true}
                   options={options}>
                   <TableHeaderColumn
-                    dataField='serviceJobNumber'
+                    dataField='claimNumber'
                     isKey
                     width="15%"
                     dataSort
                     >
-                    Service Job Number
+                    Claim Number
                   </TableHeaderColumn>
                   <TableHeaderColumn
-                    dataField='serviceJobType'
+                    dataField='claimType'
                     width="15%"
                     filter={ { type: 'TextFilter'} }
                     dataSort>
-                    Service Job Type
+                    Claim Type
                   </TableHeaderColumn>
                   <TableHeaderColumn
-                    dataField='serviceJobDate'
+                    dataField='claimDate'
                     width="15%"
                     dataSort>
-                    Service Job Date
+                    Claim Date
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='customerFirstName'
@@ -89,9 +89,9 @@ class ServiceJobListTable extends Component {
                     Last Name
                   </TableHeaderColumn>
                   <TableHeaderColumn
-                    dataField='scheduledServiceJobDate'
+                    dataField='claimSubmittedDate'
                     width="30%">
-                    Scheduled Service Job Date
+                    Claim Submitted Date
                   </TableHeaderColumn>
                   <TableHeaderColumn width="20%"></TableHeaderColumn>
                 </BootstrapTable>
@@ -104,4 +104,4 @@ class ServiceJobListTable extends Component {
     );
   }
 }
-export default ServiceJobListTable
+export default ClaimListTable

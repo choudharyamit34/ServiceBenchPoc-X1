@@ -1,0 +1,26 @@
+h2, #playerDiv{
+    margin:30px;
+    padding:10px;
+}
+nav{
+    background-color:gray;
+}
+.myfooter{
+    font-weight: bolder;
+    color:green;
+    font-size: xx-large;
+}
+img{
+    margin: 0 auto;
+    padding:10px;
+    width:1100px;
+    height: 550px;
+}
+#scheduleList{
+    margin:30px;
+    padding:10px;
+    font-size: x-large;
+    font-weight: bolder;
+    font-style: italic;
+    color:navy;
+}
