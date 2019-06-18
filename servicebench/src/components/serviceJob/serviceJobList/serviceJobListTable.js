@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 
 const data =[];
@@ -20,6 +20,9 @@ class ServiceJobListTable extends Component {
             });
     }
 
+    handleRowDoubleClick = row => {
+    console.log("in handle double row click ");
+    }
 
   removeItem = itemId => {
     this.setState({
@@ -29,6 +32,7 @@ class ServiceJobListTable extends Component {
 
   render() {
     const { data } = this.state;
+    const handleRowDoubleClick=this.handleRowDoubleClick;
     console.log(data);
     const options = {
       sizePerPage: 2,
@@ -37,6 +41,10 @@ class ServiceJobListTable extends Component {
       firstPage: 'First',
       lastPage: 'Last',
       hideSizePerPage: true,
+      onRowDoubleClick: function(row)
+      {
+console.log(row);
+      }
     };
 
     return (
