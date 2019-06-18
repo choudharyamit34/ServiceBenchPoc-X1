@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+import { Redirect } from 'react-router-dom';
 
 
 const data =[];
@@ -43,7 +44,8 @@ class ServiceJobListTable extends Component {
       hideSizePerPage: true,
       onRowDoubleClick: function(row)
       {
-console.log(row);
+        console.log(row);
+                return <Redirect to='/home' />
       }
     };
 
