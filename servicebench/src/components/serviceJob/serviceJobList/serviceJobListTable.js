@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import { Redirect } from 'react-router-dom';
 
-
-const data =[];
+const data = [];
 class ServiceJobListTable extends Component {
-    state = {
-        data: []
-    };
-    
-    componentDidMount() {
-        const url = "http://localhost:3007/ServiceJobs";
+  state = {
+    data: []
+  };
 
-        fetch(url)
-            .then(result => result.json())
-            .then(result => {
-                this.setState({
-                    data: result
-                })
-            });
-    }
+  componentDidMount() {
+    const url = "http://localhost:3007/ServiceJobs";
 
-    handleRowDoubleClick = row => {
+    fetch(url)
+      .then(result => result.json())
+      .then(result => {
+        this.setState({
+          data: result
+        })
+      });
+  }
+
+  handleRowDoubleClick = row => {
     console.log("in handle double row click ");
-    }
+  }
 
   removeItem = itemId => {
     this.setState({
@@ -33,19 +31,24 @@ class ServiceJobListTable extends Component {
 
   render() {
     const { data } = this.state;
-    const handleRowDoubleClick=this.handleRowDoubleClick;
+    const history = this.props.history;
     console.log(data);
     const options = {
-      sizePerPage: 2,
+      sizePerPage: 4,
       prePage: 'Previous',
       nextPage: 'Next',
       firstPage: 'First',
       lastPage: 'Last',
       hideSizePerPage: true,
-      onRowDoubleClick: function(row)
-      {
+      onRowDoubleClick: function (row) {
         console.log(row);
-                return <Redirect to='/home' />
+        console.log(history);
+        console.log(row.serviceJobNumber);
+        const serviceJobNumber = row.serviceJobNumber;
+        history.push({
+          pathname: '/serviceJobDetail',
+          state: { serviceJobNumber: serviceJobNumber }
+        })
       }
     };
 
@@ -55,11 +58,11 @@ class ServiceJobListTable extends Component {
           <div className="col-md-12">
             <div className="card">
               <div className="header">
-                <h4></h4>                
+                <h4></h4>
               </div>
               <div className="content">
                 <BootstrapTable
-                data={data}
+                  data={data}
                   bordered={false}
                   striped
                   pagination={true}
@@ -69,13 +72,13 @@ class ServiceJobListTable extends Component {
                     isKey
                     width="15%"
                     dataSort
-                    >
+                  >
                     Service Job Number
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='serviceJobType'
                     width="15%"
-                    filter={ { type: 'TextFilter'} }
+                    filter={{ type: 'TextFilter' }}
                     dataSort>
                     Service Job Type
                   </TableHeaderColumn>
@@ -87,14 +90,14 @@ class ServiceJobListTable extends Component {
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='customerFirstName'
-                    filter={ { type: 'TextFilter'} }
+                    filter={{ type: 'TextFilter' }}
                     width="15%"
                     dataSort>
                     First Name
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='customerLastName'
-                    filter={ { type: 'TextFilter'} }
+                    filter={{ type: 'TextFilter' }}
                     width="15%">
                     Last Name
                   </TableHeaderColumn>
