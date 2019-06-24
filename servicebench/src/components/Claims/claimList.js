@@ -9,8 +9,7 @@ class ClaimListTable extends Component {
     };
     
     componentDidMount() {
-        const url = "http://localhost:3007/Claims";
-
+    const url =   `http://localhost:3007/Claims`;
         fetch(url)
             .then(result => result.json())
             .then(result => {
@@ -29,6 +28,7 @@ class ClaimListTable extends Component {
 
   render() {
     const { data } = this.state;
+    const history = this.props.history;
     console.log(data);
     const options = {
       sizePerPage: 10,
@@ -37,6 +37,16 @@ class ClaimListTable extends Component {
       firstPage: 'First',
       lastPage: 'Last',
       hideSizePerPage: true,
+      onRowDoubleClick: function (row) {
+        console.log(row);
+        console.log(history);
+        console.log(row.claimNumber);
+        const claimNumber = row.claimNumber;
+        history.push({
+          pathname: '/claimDetail',
+          state: { claimNumber: claimNumber }
+        })
+      }
     };
 
     return (

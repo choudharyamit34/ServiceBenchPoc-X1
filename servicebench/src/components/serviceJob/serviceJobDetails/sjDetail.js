@@ -36,11 +36,11 @@ class SjDetail extends Component {
         return (
             <div>
                 <div><button className="btn btn-link" onClick={this.props.history.goBack}>Go Back</button></div>
-                <div className="container">
-                    <table className='table table-bordered table-hover'>
+                <div className='container'>
+                    <table className='table .table-striped'>
                         <tbody>
                             <tr>
-                                <td>Service Job Number</td>
+                                <td ><label >Service Job Number</label></td>
                                 <td>{data.serviceJobNumber}</td>
                                 <td>Service Job Type</td>
                                 <td>{data.serviceJobType}</td>
