@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReactDataGrid from 'react-data-grid';
-
 const data2 = {};
 class SjDetail extends Component {
     state = {

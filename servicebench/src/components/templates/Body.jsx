@@ -7,12 +7,13 @@ import ClaimDetail from '../Claims/claimDetail';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import PageNotFound from '../common/pagenotfound';
 import history from '..//../app/history';
+import Home1 from '../common/home.1';
 const Body = () => (
   
   <Switch history={history}>
       <Route exact path='/' 
-      render={ () => (<Redirect to='/home'/> )} />
-      <Route path='/home' component = {Home}/>
+      render={ () => (<Redirect to='/home1'/> )} />
+      <Route path='/home' component = {Home1}/>
       <Route path='/serviceJobs' component = {ServiceJobListTable} history={history}/>   
       <Route path='/serviceJobDetail' component = {SjDetail} history={history}/> 
       <Route path='/claims' component = {ClaimListTable}/>  

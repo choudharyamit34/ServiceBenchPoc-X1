@@ -54,6 +54,7 @@ class ServiceJobListTable extends Component {
 
     return (
       <div className="container-fluid">
+        <div><button className="btn btn-link" onClick={this.props.history.goBack}>Go Back</button></div>
         <div className="row">
           <div className="col-md-12">
             <div className="card">
