@@ -35,7 +35,7 @@ class claimDetail extends Component {
 
         return (
             <div>
-                <div><button className="btn btn-link" onClick={this.props.history.goBack}>Go Back</button></div>
+                <div><button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button></div>
                 <div className='container'>
                     <table className='table .table-striped'>
                         <tbody>
