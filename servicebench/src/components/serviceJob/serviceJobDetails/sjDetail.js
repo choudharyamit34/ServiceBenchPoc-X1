@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import serviceJobService from '../../../services/serviceJob.service';
 const data2 = {};
 class SjDetail extends Component {
     state = {
@@ -9,11 +10,18 @@ class SjDetail extends Component {
         const serviceJobNumber = this.props.history.location.state.serviceJobNumber
         console.log("service job number before fetch");
         console.log(serviceJobNumber);
+        // serviceJobService.getAllServicejobBySjnumber(serviceJobNumber).then((data) => {
+        //     this.setState({
+        //         posts: [...data],
+        //         message: ""
+        //     });
+        // });
+
         fetch(`http://localhost:3007/ServiceJobs?serviceJobNumber=${serviceJobNumber}`)
             .then(result => result.json())
             .then(result => {
                 this.setState({
-                    data: { ...result }
+                    data: {...result}
 
                 })
             });

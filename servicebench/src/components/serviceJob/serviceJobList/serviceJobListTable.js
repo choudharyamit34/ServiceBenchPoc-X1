@@ -1,14 +1,40 @@
 import React, { Component } from 'react';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+import serviceJobService from '../../../services/serviceJob.service';
 
 const data = [];
 class ServiceJobListTable extends Component {
-  state = {
-    data: []
-  };
+  constructor() {
+    super();
+    this.setStateFromApiResult = this.setStateFromApiResult.bind(this);
+    this.state = {
+      data: []
+    };
+  }
 
+
+  setStateFromApiResult = function (data1) {
+    console.log("data from cab", data1);
+    if (data != undefined) {
+      console.log(data1[0]);
+      this.setState({
+        data: data1
+      });
+
+    }
+  }
   componentDidMount() {
     const url = "http://localhost:3007/ServiceJobs";
+    //serviceJobService.getAllServiceJobs(this.setStateFromApiResult);
+
+    // serviceJobService.getAllServiceJobs.then((data,this.setStateFromApiResult) => {
+    //   this.setState({
+    //     result: [...data],
+    //     message: ""
+    //   });
+    // }), (eMsg) => {
+    //   console.log("error from did mount", eMsg);
+    // };
 
     fetch(url)
       .then(result => result.json())
@@ -17,8 +43,8 @@ class ServiceJobListTable extends Component {
           data: result
         })
       });
-  }
 
+  }
   handleRowDoubleClick = row => {
     console.log("in handle double row click ");
   }
@@ -32,7 +58,7 @@ class ServiceJobListTable extends Component {
   render() {
     const { data } = this.state;
     const history = this.props.history;
-    console.log(data);
+    console.log("data in reder",data);
     const options = {
       sizePerPage: 4,
       prePage: 'Previous',

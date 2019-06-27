@@ -2,23 +2,22 @@ import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 
-const data =[];
+const data = [];
 class ClaimListTable extends Component {
-    state = {
-        data: []
-    };
-    
-    componentDidMount() {
-    const url =   `http://localhost:3007/Claims`;
-        fetch(url)
-            .then(result => result.json())
-            .then(result => {
-                this.setState({
-                    data: result
-                })
-            });
-    }
+  state = {
+    data: []
+  };
 
+  componentDidMount() {
+    const url = `http://localhost:3007/Claims`;
+    fetch(url)
+      .then(result => result.json())
+      .then(result => {
+        this.setState({
+          data: result
+        })
+      });
+  }
 
   removeItem = itemId => {
     this.setState({
