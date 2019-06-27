@@ -1,6 +1,7 @@
 import React from "react";
 import { Pie } from "react-chartjs-2";
 import { MDBContainer } from "mdbreact";
+import { Doughnut } from 'react-chartjs-2';
 
 class SjPieChart extends React.Component {
   state = {
@@ -29,11 +30,15 @@ class SjPieChart extends React.Component {
       ]
     }
   }
-
+ showLog(elems)
+ {
+console.log(elems);
+ }
   render() {
     return (
       <MDBContainer>        
-        <Pie data={this.state.dataPie} options={{ responsive: false }} />
+        <Doughnut width={350}
+        height={300} data={this.state.dataPie} options={{ responsive: false }}   onElementsClick={this.showLog} />
       </MDBContainer>
     );
   }
