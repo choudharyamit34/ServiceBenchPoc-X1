@@ -31,9 +31,10 @@ class ClaimPieChart extends React.Component {
   }
 
   render() {
+    console.log("props in chart",this.props);
     return (
       <MDBContainer>        
-        <Pie data={this.state.dataPie} options={{ responsive: false }} />
+        <Pie data={this.state.dataPie} width={300} height={300} options={{ responsive: false }} />
       </MDBContainer>
     );
   }

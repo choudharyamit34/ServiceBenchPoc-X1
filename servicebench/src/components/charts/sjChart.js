@@ -6,17 +6,17 @@ import { Doughnut } from 'react-chartjs-2';
 class SjPieChart extends React.Component {
   state = {
     dataPie: {
-      labels: ["New", "Scheduled", "Accepted", "Rejected", "Closed"],
+      labels: ["New", "Re Assign", "Accepted", "Rejected", "Closed"],
       datasets: [
         {
           data: [300, 50, 100, 40, 120],
           backgroundColor: [
-            "#F7464A",
+            "blue",
             "#46BFBD",
             "#FDB45C",
             "#949FB1",
-            "#4D5360",
-            "#AC64AD"
+            "red",
+            "Green"
           ],
           hoverBackgroundColor: [
             "#FF5A5E",
@@ -30,15 +30,14 @@ class SjPieChart extends React.Component {
       ]
     }
   }
- showLog(elems)
- {
-console.log(elems);
+ handleElementClick(elems) {
+   console.log("handleElementClick");
  }
   render() {
     return (
       <MDBContainer>        
         <Doughnut width={350}
-        height={300} data={this.state.dataPie} options={{ responsive: false }}   onElementsClick={this.showLog} />
+        height={300} data={this.state.dataPie} options={{ responsive: false }}   onElementsClick={this.handleElementClick} />
       </MDBContainer>
     );
   }

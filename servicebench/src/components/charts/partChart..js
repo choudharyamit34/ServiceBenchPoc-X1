@@ -33,7 +33,7 @@ class PartsPieChart extends React.Component {
   render() {
     return (
       <MDBContainer>        
-        <Pie data={this.state.dataPie} options={{ responsive: false }} />
+        <Pie data={this.state.dataPie} width={300} height={300}  options={{ responsive: false }} />
       </MDBContainer>
     );
   }

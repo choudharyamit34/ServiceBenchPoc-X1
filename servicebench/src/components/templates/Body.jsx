@@ -12,7 +12,7 @@ const Body = () => (
   
   <Switch history={history}>
       <Route exact path='/' 
-      render={ () => (<Redirect to='/home1'/> )} />
+      render={ () => (<Redirect to='/home'/> )} />
       <Route path='/home' component = {Home1}/>
       <Route path='/serviceJobs' component = {ServiceJobListTable} history={history}/>   
       <Route path='/serviceJobDetail' component = {SjDetail} history={history}/> 
