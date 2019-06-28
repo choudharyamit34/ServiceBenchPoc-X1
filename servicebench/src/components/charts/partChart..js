@@ -1,6 +1,7 @@
 import React from "react";
 import { Pie } from "react-chartjs-2";
 import { MDBContainer } from "mdbreact";
+import { Doughnut } from 'react-chartjs-2';
 
 class PartsPieChart extends React.Component {
   state = {
@@ -29,7 +30,9 @@ class PartsPieChart extends React.Component {
       ]
     }
   }
-
+  handleElementClick(elems) {
+    console.log("handleElementClick");
+  }
   render() {
     return (
       <MDBContainer>        

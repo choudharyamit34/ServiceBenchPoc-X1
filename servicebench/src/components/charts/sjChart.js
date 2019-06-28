@@ -36,7 +36,7 @@ class SjPieChart extends React.Component {
   render() {
     return (
       <MDBContainer>        
-        <Doughnut width={350}
+        <Doughnut width={300}
         height={300} data={this.state.dataPie} options={{ responsive: false }}   onElementsClick={this.handleElementClick} />
       </MDBContainer>
     );
