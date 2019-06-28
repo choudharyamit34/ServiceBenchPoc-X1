@@ -31,7 +31,7 @@ class SjPieChart extends React.Component {
     }
   }
  handleElementClick(elems) {
-   console.log("handleElementClick");
+   console.log(elems);
  }
   render() {
     return (
