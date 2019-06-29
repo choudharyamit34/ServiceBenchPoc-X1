@@ -4,7 +4,7 @@ const serviceJobService = {
             fetch('http://localhost:3007/ServiceJobs').then((response) => {
                 console.log("response",response);
                 response.json().then((data) => {
-                    console.log("data",data);
+                    console.log("data recived in getAllServiceJobs ",data);
                     resolve(data);
                 }, (err) => {
                     reject("Parsing Error...");

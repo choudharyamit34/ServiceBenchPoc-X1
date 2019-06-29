@@ -14,9 +14,8 @@ class ServiceJobListTable extends Component {
 
 
   setStateFromApiResult = function (data1) {
-    console.log("data from cab", data1);
-    if (data != undefined) {
-      console.log(data1[0]);
+    console.log("data from api call", data1);
+    if (data1 != undefined) {
       this.setState({
         data: data1
       });
@@ -27,22 +26,17 @@ class ServiceJobListTable extends Component {
     const url = "http://localhost:3007/ServiceJobs";
     //serviceJobService.getAllServiceJobs(this.setStateFromApiResult);
 
-    // serviceJobService.getAllServiceJobs.then((data,this.setStateFromApiResult) => {
-    //   this.setState({
-    //     result: [...data],
-    //     message: ""
-    //   });
-    // }), (eMsg) => {
-    //   console.log("error from did mount", eMsg);
-    // };
+    serviceJobService.getAllServiceJobs().then((data) => {
+      this.setStateFromApiResult(data);
+    })
 
-    fetch(url)
-      .then(result => result.json())
-      .then(result => {
-        this.setState({
-          data: result
-        })
-      });
+    // fetch(url)
+    //   .then(result => result.json())
+    //   .then(result => {
+    //     this.setState({
+    //       data: result
+    //     })
+    //   });
 
   }
   handleRowDoubleClick = row => {
