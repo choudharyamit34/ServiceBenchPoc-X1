@@ -31,7 +31,7 @@ class SjDetail extends Component {
             console.log("data from api call", data1);
             if (data1 != undefined) {
               this.setState({
-                data: data1
+                data: {...data1}
               });
         
             }

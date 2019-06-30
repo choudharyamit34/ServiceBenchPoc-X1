@@ -17,7 +17,7 @@ const serviceJobService = {
     },
     getAllServicejobBySjnumber: function (serviceJobNumber) {
         var promise = new Promise((resolve, reject) => {
-            fetch('`http://localhost:3007/ServiceJobs?serviceJobNumber=${serviceJobNumber}`').then((response) => {
+            fetch(`http://localhost:3007/ServiceJobs?serviceJobNumber=${serviceJobNumber}`).then((response) => {
                 response.json().then((data) => {
                     resolve(data);
                 }, (err) => {
