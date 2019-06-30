@@ -2,33 +2,42 @@ import React, { Component } from 'react';
 import serviceJobService from '../../../services/serviceJob.service';
 const data2 = {};
 class SjDetail extends Component {
-    state = {
-        data: {},
-        serviceJobNumber: ''
-    };
+        constructor() {
+          super();
+          this.setStateFromApiResult = this.setStateFromApiResult.bind(this);
+          this.state = {
+            data: {},
+            serviceJobNumber:''
+          };
+        }
     componentDidMount() {
         const serviceJobNumber = this.props.history.location.state.serviceJobNumber
         console.log("service job number before fetch");
         console.log(serviceJobNumber);
-        // serviceJobService.getAllServicejobBySjnumber(serviceJobNumber).then((data) => {
-        //     this.setState({
-        //         posts: [...data],
-        //         message: ""
+        serviceJobService.getAllServicejobBySjnumber(serviceJobNumber).then((data) => {
+            this.setStateFromApiResult(data);
+        });
+               // fetch(`http://localhost:3007/ServiceJobs?serviceJobNumber=${serviceJobNumber}`)
+        //     .then(result => result.json())
+        //     .then(result => {
+        //         this.setState({
+        //             data: {...result}
+
+        //         })
         //     });
-        // });
-
-        fetch(`http://localhost:3007/ServiceJobs?serviceJobNumber=${serviceJobNumber}`)
-            .then(result => result.json())
-            .then(result => {
-                this.setState({
-                    data: {...result}
-
-                })
-            });
 
     }
+        setStateFromApiResult = function (data1) {
+            console.log("data from api call", data1);
+            if (data1 != undefined) {
+              this.setState({
+                data: data1
+              });
+        
+            }
+          }
 
-    render() {
+     render() {
         var { data } = this.state;
         //    const {data2}=data[0];
         console.log("data avialble in render ", data);

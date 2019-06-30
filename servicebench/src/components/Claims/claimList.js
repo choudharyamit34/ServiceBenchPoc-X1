@@ -1,22 +1,41 @@
 import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import claimService from '../../services/claim.service';
+
 
 
 const data = [];
 class ClaimListTable extends Component {
-  state = {
-    data: []
-  };
-
-  componentDidMount() {
-    const url = `http://localhost:3007/Claims`;
-    fetch(url)
-      .then(result => result.json())
-      .then(result => {
-        this.setState({
-          data: result
-        })
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
+    this.setStateFromApiResult = this.setStateFromApiResult.bind(this);
+  }
+  setStateFromApiResult = function (data1) {
+    console.log("data from api call", data1);
+    if (data1 != undefined) {
+      this.setState({
+        data: data1
       });
+
+    }
+  }
+  componentDidMount() {
+      const url = `http://localhost:3007/Claims`;
+      claimService.getAllClaims().then((data) => {
+        this.setStateFromApiResult(data);
+
+      });
+    
+    // fetch(url)
+    //   .then(result => result.json())
+    //   .then(result => {
+    //     this.setState({
+    //       data: result
+    //     })
+    //   });
   }
 
   removeItem = itemId => {

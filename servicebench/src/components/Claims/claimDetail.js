@@ -1,27 +1,45 @@
 import React, { Component } from 'react';
+import claimService from '../../services/claim.service';
 // import ReactDataGrid from 'react-data-grid';
 
 const data2 = {};
 class claimDetail extends Component {
-    state = {
+    constructor(){
+        super();
+        this.state= {
         data: {},
-        claimNumber: ''
-    };
+        claimNumber: '',
+        }
+        this.setStateFromApiResult=this.setStateFromApiResult.bind(this);
+    }
     componentDidMount() {
         const claimNumber = this.props.history.location.state.claimNumber
         console.log("CLaim number before fetch");
         console.log(claimNumber);
-        fetch(`http://localhost:3007/Claims?claimNumber=${claimNumber}`)
-            .then(result => result.json())
-            .then(result => {
-                this.setState({
-                    data: { ...result }
+        claimService.getClaimByClaimNumber(claimNumber).then((data) => {
+        console.log("data in did mount in claim details after api call",data);
+            this.setStateFromApiResult(data);
+    
+          });
+        // fetch(`http://localhost:3007/Claims?claimNumber=${claimNumber}`)
+        //     .then(result => result.json())
+        //     .then(result => {
+        //         this.setState({
+        //             data: { ...result }
 
-                })
-            });
+        //         })
+        //     });
 
     }
-
+    setStateFromApiResult = function (data1) {
+        console.log("data from getClaimbyClaimNumber api call", data1);
+        if (data1 != undefined) {
+          this.setState({
+            data: {...data1}
+          });
+    
+        }
+      }
     render() {
         var { data } = this.state;
         //    const {data2}=data[0];
