@@ -5,7 +5,7 @@ export default class Dashboard extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavgationComponent />
+        {/* <NavgationComponent /> commented to show header menu*/}
         <ChartComponent />
       </React.Fragment>
     )
