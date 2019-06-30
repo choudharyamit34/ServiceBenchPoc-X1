@@ -49,9 +49,11 @@ class SjDetail extends Component {
         }
 
         return (
-            <div>
-                <div><button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button></div>
-                <div className='container'>
+            <div className="container-fluid">
+                <div>
+                    <button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button>
+                </div>
+                <div >
                     <table className='table table-bordered table-dark'>
                         <tbody>
                             <tr>
