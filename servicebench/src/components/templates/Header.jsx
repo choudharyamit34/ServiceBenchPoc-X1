@@ -19,7 +19,7 @@ const Header = () =>(
                         <li className="nav-item"><Link className='nav-link' to='/home'>
                         <Icon name='cogs' size='big'/><br />Parts</Link></li>
                         <li className="nav-item"><Link className='nav-link' to='/claims'>
-                        <Icon outline name='file alternate' size='big'/><br />Claims</Link></li>
+                        <Icon name='file alternate' size='big'/><br />Claims</Link></li>
                         <li className="nav-item"><Link className='nav-link' to='/home'>
                         <Icon name='copy' size='big'/><br />Documents</Link></li>
                         <li className="nav-item"><Link className='nav-link' to='/home'>
