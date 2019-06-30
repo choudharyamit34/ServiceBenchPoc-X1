@@ -4,7 +4,7 @@ import  { Icon } from 'semantic-ui-react'
 
 const Header = () =>(
     <header>
-        <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <button type="button" data-target="#navbarCollapse"
                         data-toggle="collapse" className="navbar-toggler">
                         <span className="navbar-toggler-icon"></span>
