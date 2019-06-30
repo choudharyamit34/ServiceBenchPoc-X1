@@ -55,46 +55,46 @@ class SjDetail extends Component {
                     <table className='table table-bordered table-dark'>
                         <tbody>
                             <tr>
-                                <td ><label >Service Job Number</label></td>
+                                <td > <b color={'grey'}>Service Job Number</b></td>
                                 <td>{data.serviceJobNumber}</td>
-                                <td>Service Job Type</td>
+                                <td><b color={'grey'}>Service Job Type</b></td>
                                 <td>{data.serviceJobType}</td>
                             </tr>
 
                             <tr>
-                                <td>Service Job Date</td>
+                                <td><b color={'grey'}>Service Job Date</b></td>
                                 <td>{data.serviceJobDate}</td>
-                                <td>Scheduled ServiceJob Date</td>
+                                <td><b color={'grey'}>Scheduled ServiceJob Date</b></td>
                                 <td>{data.scheduledServiceJobDate}</td>
                             </tr>                            
                             <tr>
-                                <td>First Name</td>
+                                <td><b color={'grey'}>First Name</b></td>
                                 <td>{data.customerFirstName}</td>
-                                <td>Last name</td>
+                                <td><b color={'grey'}>Last name</b></td>
                                 <td>{data.customerLastName}</td>
                             </tr>
                             <tr>
-                                <td>Mobile Phone</td>
+                                <td><b color={'grey'}>Mobile Phone</b></td>
                                 <td>{data.mobilePhone}</td>
-                                <td>Home Phone</td>
+                                <td><b color={'grey'}>Home Phone</b></td>
                                 <td>{data.homePhone}</td>
                             </tr>
                             <tr>
-                                <td>City</td>
+                                <td><b color={'grey'}>City</b></td>
                                 <td>{data.city}</td>
-                                <td>State</td>
+                                <td><b color={'grey'}>State</b></td>
                                 <td>{data.state}</td>
                             </tr>
                             <tr>
-                                <td>Postal Code</td>
+                                <td><b color={'grey'}>Postal Code</b></td>
                                 <td>{data.postalCode}</td>
-                                <td>Addrerss Line 1 </td>
+                                <td><b color={'grey'}>Addrerss Line 1</b> </td>
                                 <td>{data.addLine1}</td>
                             </tr>
                             <tr>
-                                <td>Address Line 2</td>
+                                <td><b color={'grey'}>Address Line 2</b></td>
                                 <td>{data.addLine2}</td>
-                                <td>Addrerss Line 3 </td>
+                                <td><b color={'grey'}>Addrerss Line 3 </b></td>
                                 <td>{data.addLine3}</td>
                             </tr>
                           
