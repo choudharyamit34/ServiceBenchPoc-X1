@@ -16,3 +16,4 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 # to load images
 npm install --save-dev file-loader
+and add loader in webpack-common.js
