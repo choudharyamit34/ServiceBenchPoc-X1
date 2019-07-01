@@ -88,6 +88,7 @@ class ClaimListTable extends Component {
                     isKey
                     width="15%"
                     dataSort
+                    filter={{ type: 'TextFilter' }}
                     >
                     Claim Number
                   </TableHeaderColumn>
@@ -101,6 +102,7 @@ class ClaimListTable extends Component {
                   <TableHeaderColumn
                     dataField='claimDate'
                     width="15%"
+                    filter={{ type: 'TextFilter' }}
                     dataSort>
                     Claim Date
                   </TableHeaderColumn>
@@ -119,6 +121,7 @@ class ClaimListTable extends Component {
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='claimSubmittedDate'
+                    filter={{ type: 'TextFilter' }}
                     width="30%">
                     Claim Submitted Date
                   </TableHeaderColumn>

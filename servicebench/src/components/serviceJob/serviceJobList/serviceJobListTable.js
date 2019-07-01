@@ -93,6 +93,7 @@ class ServiceJobListTable extends Component {
                     isKey
                     width="15%"
                     dataSort
+                    filter={{ type: 'TextFilter' }}
                   >
                     Service Job Number
                   </TableHeaderColumn>
@@ -106,6 +107,7 @@ class ServiceJobListTable extends Component {
                   <TableHeaderColumn
                     dataField='serviceJobDate'
                     width="15%"
+                    filter={{ type: 'TextFilter' }}
                     dataSort>
                     Service Job Date
                   </TableHeaderColumn>
@@ -113,6 +115,7 @@ class ServiceJobListTable extends Component {
                     dataField='customerFirstName'
                     filter={{ type: 'TextFilter' }}
                     width="15%"
+
                     dataSort>
                     First Name
                   </TableHeaderColumn>
@@ -124,6 +127,7 @@ class ServiceJobListTable extends Component {
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='scheduledServiceJobDate'
+                    filter={{ type: 'TextFilter' }}
                     width="30%">
                     Scheduled Service Job Date
                   </TableHeaderColumn>
