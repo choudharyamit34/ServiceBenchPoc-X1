@@ -106,6 +106,7 @@ class ServiceJobListTable extends Component {
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='serviceJobDate'
+                    filter={{ type: 'TextFilter' }}
                     width="15%"
                     filter={{ type: 'TextFilter' }}
                     dataSort>
