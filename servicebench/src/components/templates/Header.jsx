@@ -27,7 +27,7 @@ const Header = () =>(
                         <Icon name='home' size='big' /><br />Home</Link></li>
                         <li className="nav-item"><Link className='nav-link' to='/serviceJobs'>
                         <Icon name='tasks' size='big'/><br />Jobs</Link></li>
-                        <li className="nav-item"><Link className='nav-link' to='/home'>
+                        <li className="nav-item"><Link className='nav-link' to='/parts'>
                         <Icon name='cogs' size='big'/><br />Parts</Link></li>
                         <li className="nav-item"><Link className='nav-link' to='/claims'>
                         <Icon name='file alternate' size='big'/><br />Claims</Link></li>
