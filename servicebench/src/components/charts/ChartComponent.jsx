@@ -3,6 +3,7 @@ import SjPieChart from './sjChart';
 import ClaimPieChart from './claimChart';
 import PartsPieChart from './partChart';
 import {CardColumns} from 'reactstrap';
+import {Link} from 'react-router-dom';
 class ChartComponent extends Component {
     render() {
         return (
@@ -17,7 +18,7 @@ class ChartComponent extends Component {
                                 <SjPieChart />
                             </CardColumns>
                             <div className="card-footer">
-                                <a href="/serviceJobs" className="btn btn-primary">Show More</a>
+                                <Link to="/serviceJobs" className="btn btn-primary">Show More</Link>
                             </div>
                         </div>
                     </div>
@@ -28,7 +29,7 @@ class ChartComponent extends Component {
                                 <ClaimPieChart />
                             </CardColumns>
                             <div className="card-footer">
-                                <a href="/claims" className="btn btn-primary">Show More</a>
+                            <Link to="/claims" className="btn btn-primary">Show More</Link>
                             </div>
                         </div>
                     </div>
@@ -39,7 +40,7 @@ class ChartComponent extends Component {
                                 <PartsPieChart />
                             </CardColumns>
                             <div className="card-footer">
-                                <a href="/serviceJobs" className="btn btn-primary">Learn More</a>
+                            <Link to="/serviceJobs" className="btn btn-primary">Learn More</Link>
                             </div>
                         </div>
                     </div>
