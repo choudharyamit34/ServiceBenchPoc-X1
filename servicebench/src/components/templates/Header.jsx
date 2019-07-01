@@ -1,6 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import  { Icon } from 'semantic-ui-react'
+import  { Icon } from 'semantic-ui-react';
+import LogoImage from '../../resources/imgs/SB_logo.png';
+
+
+var logoStyle = {
+   background: `url(${LogoImage})`,
+   width : `22%`,
+   height:80,
+   marginTop :`-22px`,
+   cursor:'pointer'
+
+}
 
 const Header = () =>(
     <header>
@@ -9,7 +20,7 @@ const Header = () =>(
                         data-toggle="collapse" className="navbar-toggler">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <a href="#" className="navbar-brand">Welcome to Service Bench</a>
+                    <div style={logoStyle} />
                 <div id="navbarCollapse" className="collapse navbar-collapse">
                     <ul className="navbar-nav">
                         <li className="nav-item"><Link className='nav-link' to='/home'>
