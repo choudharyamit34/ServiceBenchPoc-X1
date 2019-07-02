@@ -40,7 +40,7 @@ class ChartComponent extends Component {
                                 <PartsPieChart />
                             </CardColumns>
                             <div className="card-footer">
-                            <Link to="/serviceJobs" className="btn btn-primary">Learn More</Link>
+                            <Link to="/parts" className="btn btn-primary">Show More</Link>
                             </div>
                         </div>
                     </div>
