@@ -3,3 +3,14 @@
     width: 305px;
     height: 94px;
 }
+
+  .headerIcon:hover {
+    font-size: larger
+}
+
+.colorLogo{
+    color: #ecb215 
+}
+.height_75_px{
+    height: 75px;
+}
