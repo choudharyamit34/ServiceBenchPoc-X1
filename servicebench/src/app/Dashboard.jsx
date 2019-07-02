@@ -5,11 +5,13 @@ import CarouselComponent from '../components/carousel/CarouselComponent';
 
 export default class Dashboard extends Component {
   render() {
+    const {history}=this.props;
+    // console.log('props in Dashboard',history);
     return (
       <React.Fragment>
         {/* <NavgationComponent /> commented to show header menu*/}
         <CarouselComponent/>
-         <ChartComponent />
+         <ChartComponent history={history}/>
       </React.Fragment>
     )
   }

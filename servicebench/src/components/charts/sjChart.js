@@ -4,7 +4,12 @@ import { MDBContainer } from "mdbreact";
 import { Doughnut } from 'react-chartjs-2';
 
 class SjPieChart extends React.Component {
-  state = {
+  constructor()
+  {
+    super();
+    this.history={};
+    this.handleElementClick=this.handleElementClick.bind(this);
+    this.state={
     dataPie: {
       labels: ["New", "Expired", "Accepted", "Rejected", "Closed"],
       datasets: [
@@ -30,10 +35,23 @@ class SjPieChart extends React.Component {
       ]
     }
   }
- handleElementClick(elems) {
-   console.log(elems);
+}
+ handleElementClick(clickData) {
+   console.log('event data in handle click',clickData);
+   const chartData=clickData[0];
+   console.log('history in handle click',this.history);
+   const label= chartData._model.label;
+   console.log('label clicked is ',label);
+
+   this.history.push({
+    pathname: '/serviceJobs',
+    state: { serviceJobStatus: label }
+  })
  }
   render() {
+    const {history}=this.props;
+    console.log('props in sj chart',history);
+    this.history={...history};
     return (
       <MDBContainer>        
         <Doughnut width={300}

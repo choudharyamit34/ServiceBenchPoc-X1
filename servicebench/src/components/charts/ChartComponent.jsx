@@ -6,6 +6,8 @@ import {CardColumns} from 'reactstrap';
 import {Link} from 'react-router-dom';
 class ChartComponent extends Component {
     render() {
+        const {history}=this.props;
+        // console.log('props in Chart component',history);
         return (
             <div className="container">
                 <h1 className="my-4">Welcome to Service Bench</h1>
@@ -15,7 +17,7 @@ class ChartComponent extends Component {
                         <div className="card h-100">
                             <h4 className="card-header">Service Jobs</h4>
                             <CardColumns>
-                                <SjPieChart />
+                                <SjPieChart history={history}/>
                             </CardColumns>
                             <div className="card-footer">
                                 <Link to="/serviceJobs" className="btn btn-primary">Show More</Link>
