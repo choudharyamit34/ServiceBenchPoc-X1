@@ -6,7 +6,7 @@ import { Doughnut } from 'react-chartjs-2';
 class SjPieChart extends React.Component {
   state = {
     dataPie: {
-      labels: ["New", "Re Assign", "Accepted", "Rejected", "Closed"],
+      labels: ["New", "Expired", "Accepted", "Rejected", "Closed"],
       datasets: [
         {
           data: [300, 50, 100, 40, 120],
