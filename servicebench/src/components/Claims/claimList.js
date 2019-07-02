@@ -8,6 +8,7 @@ const data = [];
 class ClaimListTable extends Component {
   constructor(props) {
     super(props);
+    this.history={};
     this.state = {
       data: []
     };
@@ -22,20 +23,26 @@ class ClaimListTable extends Component {
 
     }
   }
-  componentDidMount() {
-      const url = `http://localhost:3007/Claims`;
-      claimService.getAllClaims().then((data) => {
-        this.setStateFromApiResult(data);
+  componentDidMount() {     
+      let claimStatus='';
+      if ( this.props.history.location.state != undefined && this.props.history.location.state != '') {
+        claimStatus= this.props.history.location.state.claimStatus;
+      console.log('claim Status in did mount of claim list component :-',claimStatus);
+      }
+      if (claimStatus != undefined && claimStatus != '' ) {
+        console.log('calling by status for status : -',claimStatus);
+        claimService.getClaimsByClaimStatus(claimStatus).then((data) => {
+          this.setStateFromApiResult(data);
+        })
+      }
+      else {
+        console.log('Searching all Claims as Claims Status  is null: -',claimStatus);
+        claimService.getAllClaims().then((data) => {
+          this.setStateFromApiResult(data);
+  
+        });
+      }   
 
-      });
-    
-    // fetch(url)
-    //   .then(result => result.json())
-    //   .then(result => {
-    //     this.setState({
-    //       data: result
-    //     })
-    //   });
   }
 
   removeItem = itemId => {
@@ -49,7 +56,7 @@ class ClaimListTable extends Component {
     const history = this.props.history;
     console.log(data);
     const options = {
-      sizePerPage: 10,
+      sizePerPage: 4,
       prePage: 'Previous',
       nextPage: 'Next',
       firstPage: 'First',
@@ -91,6 +98,13 @@ class ClaimListTable extends Component {
                     filter={{ type: 'TextFilter' }}
                     >
                     Claim Number
+                  </TableHeaderColumn>
+                  <TableHeaderColumn
+                    dataField='claimStatus'
+                    width="15%"
+                    filter={ { type: 'TextFilter'} }
+                    dataSort>
+                    Claim Status
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='claimType'
