@@ -23,21 +23,25 @@ class ServiceJobListTable extends Component {
     }
   }
   componentDidMount() {
+    console.log('props in did mount in sj list component',this.props);
+    const history=this.props.history;
+    // console.log('History in  sj list component',history);
+    const serviceJobStatus = this.props.history.location.state.serviceJobStatus;
+    console.log('Servicejob Status sj list component :-',serviceJobStatus);
     const url = "http://localhost:3007/ServiceJobs";
     //serviceJobService.getAllServiceJobs(this.setStateFromApiResult);
-
-    serviceJobService.getAllServiceJobs().then((data) => {
-      this.setStateFromApiResult(data);
-    })
-
-    // fetch(url)
-    //   .then(result => result.json())
-    //   .then(result => {
-    //     this.setState({
-    //       data: result
-    //     })
-    //   });
-
+    if (serviceJobStatus != '' && serviceJobStatus != undefined) {
+      console.log('calling by status for status : -',serviceJobStatus);
+      serviceJobService.getAllServicejobBySjStatus(serviceJobStatus).then((data) => {
+        this.setStateFromApiResult(data);
+      })
+    }
+    else {
+      console.log('Searching all Service job: -',serviceJobStatus);
+      serviceJobService.getAllServiceJobs().then((data) => {
+        this.setStateFromApiResult(data);
+      })
+    }    
   }
   handleRowDoubleClick = row => {
     console.log("in handle double row click ");
