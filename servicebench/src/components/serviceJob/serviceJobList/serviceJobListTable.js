@@ -26,11 +26,14 @@ class ServiceJobListTable extends Component {
     console.log('props in did mount in sj list component',this.props);
     const history=this.props.history;
     // console.log('History in  sj list component',history);
-    const serviceJobStatus = this.props.history.location.state.serviceJobStatus;
+    let serviceJobStatus='';
+    if ( this.props.history.location.state != undefined && this.props.history.location.state != '') {
+      serviceJobStatus= this.props.history.location.state.serviceJobStatus;
     console.log('Servicejob Status sj list component :-',serviceJobStatus);
+    }
     const url = "http://localhost:3007/ServiceJobs";
     //serviceJobService.getAllServiceJobs(this.setStateFromApiResult);
-    if (serviceJobStatus != '' && serviceJobStatus != undefined) {
+    if (serviceJobStatus != undefined && serviceJobStatus != '' ) {
       console.log('calling by status for status : -',serviceJobStatus);
       serviceJobService.getAllServicejobBySjStatus(serviceJobStatus).then((data) => {
         this.setStateFromApiResult(data);
