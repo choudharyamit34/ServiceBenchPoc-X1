@@ -6,20 +6,20 @@ class PartList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            list: []
+            parts: []
         };
     }
 
     componentDidMount() {
         const url = `http://localhost:3007/parts`;
         partService.getAllParts().then((data) => {
-            this.setState({ list: data });
+            this.setState({ parts: data });
 
         });
     }
 
     render() {
-        const { list } = this.state;
+        const { parts } = this.state;
         const history = this.props.history;
         // console.log(data);
         const options = {
@@ -52,7 +52,7 @@ class PartList extends Component {
                             </div>
                             <div className="content">
                                 <BootstrapTable
-                                    data={list}
+                                    data={parts}
                                     bordered={false}
                                     striped
                                     pagination={true}
