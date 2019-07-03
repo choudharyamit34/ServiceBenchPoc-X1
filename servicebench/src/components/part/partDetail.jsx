@@ -39,6 +39,8 @@ class PartDetail extends Component {
                             </tr>
 
                             <tr>
+                                <td>Part Status</td>
+                                <td>{part.partStatus}</td>
                                 <td>Cost</td>
                                 <td>{part.cost}</td>
                             </tr>
