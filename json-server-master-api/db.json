@@ -307,30 +307,35 @@
       "id": 1,
       "partNumber": "PART-01",
       "partType": "L",
+	  "partStatus" : "Ordered",
       "cost": 65.45
     },
     {
       "id": 2,
       "partNumber": "PART-02",
       "partType": "P",
+	  "partStatus" : "Shipped",
       "cost": 125.4
     },
     {
       "id": 3,
       "partNumber": "PART-03",
       "partType": "L",
+	  "partStatus" : "In Transit",
       "cost": 243.14
     },
     {
       "id": 4,
       "partNumber": "PART-04",
       "partType": "L",
+	  "partStatus" : "In Depot",
       "cost": 365.45
     },
     {
       "id": 5,
       "partNumber": "PART-05",
       "partType": "L",
+	  "partStatus" : "Not In Stock",
       "cost": 95.45
     }
   ]
