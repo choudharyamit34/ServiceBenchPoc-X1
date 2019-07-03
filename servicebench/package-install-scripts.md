@@ -23,3 +23,7 @@ npm install --save react-responsive-carousel
 
 #to load icons
 npm install --save semantic-ui-react
+
+#to load react-bootstrap form
+#v1.0.0-beta.9 is compatible with bootstrap 4
+npm install --save react-bootstrap
