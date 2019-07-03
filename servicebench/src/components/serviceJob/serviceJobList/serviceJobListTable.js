@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import serviceJobService from '../../../services/serviceJob.service';
+import { Icon } from 'semantic-ui-react';
 
 const data = [];
 class ServiceJobListTable extends Component {
@@ -24,28 +25,28 @@ class ServiceJobListTable extends Component {
     }
   }
   componentDidMount() {
-    console.log('props in did mount in sj list component',this.props);
-    const history=this.props.history;
+    console.log('props in did mount in sj list component', this.props);
+    const history = this.props.history;
     // console.log('History in  sj list component',history);
-    let serviceJobStatus='';
-    if ( this.props.history.location.state != undefined && this.props.history.location.state != '') {
-      serviceJobStatus= this.props.history.location.state.serviceJobStatus;
-    console.log('Servicejob Status sj list component :-',serviceJobStatus);
+    let serviceJobStatus = '';
+    if (this.props.history.location.state != undefined && this.props.history.location.state != '') {
+      serviceJobStatus = this.props.history.location.state.serviceJobStatus;
+      console.log('Servicejob Status sj list component :-', serviceJobStatus);
     }
     const url = "http://localhost:3007/ServiceJobs";
     //serviceJobService.getAllServiceJobs(this.setStateFromApiResult);
-    if (serviceJobStatus != undefined && serviceJobStatus != '' ) {
-      console.log('calling by status for status : -',serviceJobStatus);
+    if (serviceJobStatus != undefined && serviceJobStatus != '') {
+      console.log('calling by status for status : -', serviceJobStatus);
       serviceJobService.getAllServicejobBySjStatus(serviceJobStatus).then((data) => {
         this.setStateFromApiResult(data);
       })
     }
     else {
-      console.log('Searching all Service job: -',serviceJobStatus);
+      console.log('Searching all Service job: -', serviceJobStatus);
       serviceJobService.getAllServiceJobs().then((data) => {
         this.setStateFromApiResult(data);
       })
-    }    
+    }
   }
   handleRowDoubleClick = row => {
     console.log("in handle double row click ");
@@ -60,7 +61,7 @@ class ServiceJobListTable extends Component {
   render() {
     const { data } = this.state;
     const history = this.props.history;
-    console.log("data in reder",data);
+    console.log("data in reder", data);
     const options = {
       sizePerPage: 4,
       prePage: 'Previous',
@@ -82,10 +83,14 @@ class ServiceJobListTable extends Component {
 
     return (
       <div className="container-fluid">
+        <br />
         <div>
-          <button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button>
-          <Link to="/addServiceJob" className="btn btn-primary">Add Service Job</Link>
+          <Link to={this.props.history.goBack}>
+            <Icon name='arrow circle left' size='big' className="colorLogo" onClick={this.props.history.goBack}></Icon>
+          </Link>
+          <Link to="/addServiceJob" className="btn btn-primary">Add Service Job</Link>
         </div>
+        <br />
         <div className="row">
           <div className="col-md-12">
             <div className="card">
@@ -109,7 +114,7 @@ class ServiceJobListTable extends Component {
                     Service Job Number
                   </TableHeaderColumn>
                   <TableHeaderColumn
-                    dataField='serviceJobStatus'                   
+                    dataField='serviceJobStatus'
                     width="15%"
                     dataSort
                     filter={{ type: 'TextFilter' }}
