@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import serviceJobService from '../../../services/serviceJob.service';
 
@@ -81,7 +82,10 @@ class ServiceJobListTable extends Component {
 
     return (
       <div className="container-fluid">
-        <div><button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button></div>
+        <div>
+          <button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button>
+          <Link to="/addServiceJob" className="btn btn-primary">Add Service Job</Link>
+        </div>
         <div className="row">
           <div className="col-md-12">
             <div className="card">
