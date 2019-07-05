@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import partService from '../../services/part.service.js';
+import { Link } from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 
 class PartDetail extends Component {
     constructor(props) {
@@ -25,9 +27,13 @@ class PartDetail extends Component {
 
         return (
             <div className='container-fluid'>
+                <br />
                 <div>
-                    <button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button>
+                    <Link to={this.props.history.goBack}>
+                        <Icon name='arrow circle left' size='big' className="colorLogo" onClick={this.props.history.goBack}></Icon>
+                    </Link>
                 </div>
+                <br />
                 <div >
                     <table className='table table-bordered table-dark '>
                         <tbody>

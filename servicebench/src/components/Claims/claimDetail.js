@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import claimService from '../../services/claim.service';
 // import ReactDataGrid from 'react-data-grid';
+import { Link } from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 
 const data2 = {};
 class claimDetail extends Component {
@@ -53,9 +55,13 @@ class claimDetail extends Component {
 
         return (
             <div className='container-fluid'>
+                <br />
                 <div>
-                    <button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button>
-                    </div>
+                    <Link to={this.props.history.goBack}>
+                        <Icon name='arrow circle left' size='big' className="colorLogo" onClick={this.props.history.goBack}></Icon>
+                    </Link>
+                </div>
+                <br />
                 <div >
                     <table className='table table-bordered table-dark '>
                         <tbody>
