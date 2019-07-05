@@ -338,5 +338,12 @@
 	  "partStatus" : "Not In Stock",
       "cost": 95.45
     }
+  ],
+   "users": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "password": "admin"
+	  }
   ]
 }
