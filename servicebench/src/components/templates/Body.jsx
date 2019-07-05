@@ -11,11 +11,13 @@ import Home1 from '../common/home.1';
 import PartList from '../part/partList';
 import PartDetail from '../part/partDetail';
 import ServiceJobInput from '../serviceJob/serviceJobInput/ServiceJobInput';
+import LoginComponent from '../login/LoginComponent';
 const Body = () => (
 
   <Switch history={history}>
     <Route exact path='/'
-      render={() => (<Redirect to='/home' />)} />
+      render={() => (<Redirect to='/login' />)} />
+    <Route path='/login' component={LoginComponent} />
     <Route path='/home' component={Home1} />
     <Route path='/serviceJobs' component={ServiceJobListTable} history={history} />
     <Route path='/serviceJobDetail' component={SjDetail} history={history} />
