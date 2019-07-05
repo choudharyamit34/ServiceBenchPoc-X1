@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import serviceJobService from '../../../services/serviceJob.service';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Popup } from 'semantic-ui-react';
 
 const data = [];
 class ServiceJobListTable extends Component {
@@ -86,9 +86,14 @@ class ServiceJobListTable extends Component {
         <br />
         <div>
           <Link to={this.props.history.goBack}>
-            <Icon name='arrow circle left' size='big' className="colorLogo" onClick={this.props.history.goBack}></Icon>
+           <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
           </Link>
-          <Link to="/addServiceJob" className="btn btn-primary">Add Service Job</Link>
+          <Link to="/addServiceJob">
+            <Popup content="Add ServiceJob" trigger={<Icon name='plus square circle left' size='big' 
+                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
+          
+          </Link>
         </div>
         <br />
         <div className="row">
