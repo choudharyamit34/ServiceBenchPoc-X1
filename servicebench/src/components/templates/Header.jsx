@@ -7,7 +7,7 @@ import '../../Stylesheets/home.css';
 
 var logoStyle = {
     background: `url(${LogoImage})`,
-    width: `22%`,
+    width: `22.5%`,
     height: 80,
     marginTop: `-22px`,
     cursor: 'pointer'
@@ -20,13 +20,13 @@ var headerMenuColor = {
 
 const Header = () => (
     <header>
-        <nav className="navbar navbar-expand-lg navbar-dark  height_75_px header_position marginTop_minus_21">
+        <nav className="navbar navbar-expand-lg navbar-dark  height_28_percent header_position marginTop_minus_21">
             <button type="button" data-target="#navbarCollapse"
                 data-toggle="collapse" className="navbar-toggler">
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div style={logoStyle} />
-            <div id="navbarCollapse" className="collapse navbar-collapse">
+            <div id="navbarCollapse" className="collapse navbar-collapse icon_left_margin">
                 <ul className="navbar-nav">
                     <li className="nav-item " className="headerIcon" style={{ textAlign: "center" }}>
                         <Link className='nav-link' to='/home'>
