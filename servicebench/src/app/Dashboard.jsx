@@ -10,7 +10,7 @@ export default class Dashboard extends Component {
     return (
       <React.Fragment>
         {/* <NavgationComponent /> commented to show header menu*/}
-        <CarouselComponent/>
+        {/* <CarouselComponent/> */}
          <ChartComponent history={history}/>
       </React.Fragment>
     )
