@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import partService from '../../services/part.service.js';
 import { Link } from 'react-router-dom';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Popup } from 'semantic-ui-react';
 
 class PartList extends Component {
     constructor(props) {
@@ -56,7 +56,8 @@ class PartList extends Component {
                 <br />
                 <div>
                     <Link to={this.props.history.goBack}>
-                        <Icon name='arrow circle left' size='big' className="colorLogo" onClick={this.props.history.goBack}></Icon>
+                        <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
                     </Link>
                 </div>
                 <br />

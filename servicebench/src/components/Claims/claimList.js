@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import claimService from '../../services/claim.service';
 import { Link } from 'react-router-dom';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Popup } from 'semantic-ui-react';
 
 
 const data = [];
@@ -80,7 +80,8 @@ class ClaimListTable extends Component {
          <br />
                 <div>
                     <Link to={this.props.history.goBack}>
-                        <Icon name='arrow circle left' size='big' className="colorLogo" onClick={this.props.history.goBack}></Icon>
+                    <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
                     </Link>
                 </div>
         <br />

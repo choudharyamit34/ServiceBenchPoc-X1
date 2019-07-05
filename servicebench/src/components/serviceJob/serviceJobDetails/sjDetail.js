@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import serviceJobService from '../../../services/serviceJob.service';
 import { Link } from 'react-router-dom';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Popup } from 'semantic-ui-react';
 const data2 = {};
 class SjDetail extends Component {
     constructor() {
@@ -55,7 +55,8 @@ class SjDetail extends Component {
                 <br />
                 <div>
                     <Link to={this.props.history.goBack}>
-                        <Icon name='arrow circle left' size='big' className="colorLogo" onClick={this.props.history.goBack}></Icon>
+                    <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
                     </Link>
                 </div>
                 <br />

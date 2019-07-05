@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import partService from '../../services/part.service.js';
 import { Link } from 'react-router-dom';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Popup} from 'semantic-ui-react';
 
 class PartDetail extends Component {
     constructor(props) {
@@ -30,7 +30,8 @@ class PartDetail extends Component {
                 <br />
                 <div>
                     <Link to={this.props.history.goBack}>
-                        <Icon name='arrow circle left' size='big' className="colorLogo" onClick={this.props.history.goBack}></Icon>
+                     <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
                     </Link>
                 </div>
                 <br />

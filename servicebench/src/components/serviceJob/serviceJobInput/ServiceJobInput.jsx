@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Icon, Popup } from 'semantic-ui-react';
 
 class ServiceJobInput extends Component {
     constructor(props) {
@@ -62,9 +64,14 @@ class ServiceJobInput extends Component {
         console.log(this.props);
         return (
             <div className="container-fluid">
+                <br/>
                 <div>
-                    <button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button>
+                    <Link to={this.props.history.goBack}>
+                    <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
+                    </Link>
                 </div>
+                <br/>
                 <div className="row">
                     <div className="col-md-12">
                         <div className="card">
