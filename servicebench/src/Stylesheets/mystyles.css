@@ -24,3 +24,13 @@ img{
     font-style: italic;
     color:navy;
 }
+
+.float_right{
+    float: right;
+}
+.float_left{
+    float: left;
+}
+.marginTop_minus_21{
+    margin-top: -21px;
+}

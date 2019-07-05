@@ -4,13 +4,20 @@
     height: 94px;
 }
 
-  .headerIcon:hover {
+.headerIcon:hover {
     font-size: larger
 }
 
-.colorLogo{
-    color: #ecb215 
+.colorLogo {
+    color: #ecb215
 }
-.height_75_px{
+
+.height_75_px {
     height: 75px;
+}
+
+.header_position {
+    position: fixed !important;
+    width: 100%;
+    z-index: 1;
 }

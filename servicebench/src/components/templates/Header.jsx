@@ -20,7 +20,7 @@ var headerMenuColor = {
 
 const Header = () => (
     <header>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark height_75_px">
+        <nav className="navbar navbar-expand-lg navbar-dark  height_75_px header_position marginTop_minus_21">
             <button type="button" data-target="#navbarCollapse"
                 data-toggle="collapse" className="navbar-toggler">
                 <span className="navbar-toggler-icon"></span>
