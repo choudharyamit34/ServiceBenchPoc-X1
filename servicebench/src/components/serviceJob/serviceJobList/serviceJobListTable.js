@@ -91,8 +91,7 @@ class ServiceJobListTable extends Component {
           </Link>
           <Link to="/addServiceJob">
             <Popup content="Add ServiceJob" trigger={<Icon name='plus square circle left' size='big' 
-                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
-          
+                        className="colorLogo" />}/>          
           </Link>
         </div>
         <br />
