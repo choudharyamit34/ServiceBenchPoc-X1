@@ -10,6 +10,7 @@ import history from '..//../app/history';
 import Home1 from '../common/home.1';
 import PartList from '../part/partList';
 import PartDetail from '../part/partDetail';
+import ServiceJobInput from '../serviceJob/serviceJobInput/ServiceJobInput';
 const Body = () => (
 
   <Switch history={history}>
@@ -22,6 +23,7 @@ const Body = () => (
     <Route path='/claimDetail' component={ClaimDetail} history={history} />
     <Route path='/parts' component={PartList} />
     <Route path='/partDetail' component={PartDetail} history={history} />
+    <Route path='/addServiceJob' component = {ServiceJobInput} history={history}/> 
     <Route path='*' component={PageNotFound} />
   </Switch>
 )

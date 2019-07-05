@@ -4,7 +4,12 @@ import { MDBContainer } from "mdbreact";
 import { Doughnut } from 'react-chartjs-2';
 
 class PartsPieChart extends React.Component {
-  state = {
+  constructor()
+  {
+    super();
+    this.history={};
+    this.handleElementClick=this.handleElementClick.bind(this);
+    this.state = {
     dataPie: {
       labels: ["Ordered", "Shipped", "In Transit", "In Depot", "Not In Stock"],
       datasets: [
@@ -30,13 +35,24 @@ class PartsPieChart extends React.Component {
       ]
     }
   }
-  handleElementClick(elems) {
-    console.log("handleElementClick");
-  }
+}
+  
+handleElementClick(clickData) {
+  const chartData=clickData[0];
+  const label= chartData._model.label;
+
+  this.history.push({
+   pathname: '/parts',
+   state: { partStatus: label }
+ })
+}
+
   render() {
+    const {history}=this.props;
+    this.history={...history};
     return (
       <MDBContainer>        
-        <Pie data={this.state.dataPie} width={300} height={300}  options={{ responsive: false }} />
+        <Pie data={this.state.dataPie} width={300} height={300}  options={{ responsive: false }} onElementsClick={this.handleElementClick}/>
       </MDBContainer>
     );
   }

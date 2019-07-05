@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import serviceJobService from '../../../services/serviceJob.service';
+import { Link } from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 const data2 = {};
 class SjDetail extends Component {
-        constructor() {
-          super();
-          this.setStateFromApiResult = this.setStateFromApiResult.bind(this);
-          this.state = {
+    constructor() {
+        super();
+        this.setStateFromApiResult = this.setStateFromApiResult.bind(this);
+        this.state = {
             data: {},
-            serviceJobNumber:''
-          };
-        }
+            serviceJobNumber: ''
+        };
+    }
     componentDidMount() {
         const serviceJobNumber = this.props.history.location.state.serviceJobNumber
         console.log("service job number before fetch");
@@ -17,7 +19,7 @@ class SjDetail extends Component {
         serviceJobService.getAllServicejobBySjnumber(serviceJobNumber).then((data) => {
             this.setStateFromApiResult(data);
         });
-               // fetch(`http://localhost:3007/ServiceJobs?serviceJobNumber=${serviceJobNumber}`)
+        // fetch(`http://localhost:3007/ServiceJobs?serviceJobNumber=${serviceJobNumber}`)
         //     .then(result => result.json())
         //     .then(result => {
         //         this.setState({
@@ -27,17 +29,17 @@ class SjDetail extends Component {
         //     });
 
     }
-        setStateFromApiResult = function (data1) {
-            console.log("data from api call", data1);
-            if (data1 != undefined) {
-              this.setState({
-                data: {...data1}
-              });
-        
-            }
-          }
+    setStateFromApiResult = function (data1) {
+        console.log("data from api call", data1);
+        if (data1 != undefined) {
+            this.setState({
+                data: { ...data1 }
+            });
 
-     render() {
+        }
+    }
+
+    render() {
         var { data } = this.state;
         //    const {data2}=data[0];
         console.log("data avialble in render ", data);
@@ -50,9 +52,13 @@ class SjDetail extends Component {
 
         return (
             <div className="container-fluid">
+                <br />
                 <div>
-                    <button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button>
+                    <Link to={this.props.history.goBack}>
+                        <Icon name='arrow circle left' size='big' className="colorLogo" onClick={this.props.history.goBack}></Icon>
+                    </Link>
                 </div>
+                <br />
                 <div >
                     <table className='table table-bordered table-dark'>
                         <tbody>
@@ -68,7 +74,7 @@ class SjDetail extends Component {
                                 <td>{data.serviceJobDate}</td>
                                 <td><b color={'grey'}>Scheduled ServiceJob Date</b></td>
                                 <td>{data.scheduledServiceJobDate}</td>
-                            </tr>                            
+                            </tr>
                             <tr>
                                 <td><b color={'grey'}>First Name</b></td>
                                 <td>{data.customerFirstName}</td>
@@ -99,7 +105,7 @@ class SjDetail extends Component {
                                 <td><b color={'grey'}>Addrerss Line 3 </b></td>
                                 <td>{data.addLine3}</td>
                             </tr>
-                          
+
                         </tbody>
                     </table>
                 </div>

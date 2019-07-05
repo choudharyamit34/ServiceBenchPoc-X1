@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import partService from '../../services/part.service.js';
+import { Link } from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 
 class PartList extends Component {
     constructor(props) {
@@ -11,17 +13,28 @@ class PartList extends Component {
     }
 
     componentDidMount() {
-        const url = `http://localhost:3007/parts`;
-        partService.getAllParts().then((data) => {
-            this.setState({ parts: data });
-
-        });
+        const history = this.props.history;
+        let partStatus = '';
+        if (this.props.history.location.state != undefined && this.props.history.location.state != '') {
+            partStatus = this.props.history.location.state.partStatus;
+        }
+ 
+        if (partStatus != undefined && partStatus != '') {
+            partService.getPartsByStatus(partStatus).then((data) => {
+                this.setState({ parts: data });
+    
+            })
+        } else {
+            partService.getAllParts().then((data) => {
+                this.setState({ parts: data });
+    
+            })
+        }
     }
 
     render() {
         const { parts } = this.state;
         const history = this.props.history;
-        // console.log(data);
         const options = {
             sizePerPage: 10,
             prePage: 'Previous',
@@ -30,9 +43,6 @@ class PartList extends Component {
             lastPage: 'Last',
             hideSizePerPage: true,
             onRowDoubleClick: function (row) {
-                console.log(row);
-                console.log(history);
-                console.log(row.id);
                 const id = row.id;
                 history.push({
                     pathname: '/partDetail',
@@ -43,7 +53,13 @@ class PartList extends Component {
 
         return (
             <div className="container-fluid">
-                <div><button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button></div>
+                <br />
+                <div>
+                    <Link to={this.props.history.goBack}>
+                        <Icon name='arrow circle left' size='big' className="colorLogo" onClick={this.props.history.goBack}></Icon>
+                    </Link>
+                </div>
+                <br />
                 <div className="row">
                     <div className="col-md-12">
                         <div className="card">
@@ -71,6 +87,13 @@ class PartList extends Component {
                                         filter={{ type: 'TextFilter' }}
                                         dataSort>
                                         Part Type
+                                    </TableHeaderColumn>
+                                    <TableHeaderColumn
+                                        dataField='partStatus'
+                                        width="15%"
+                                        filter={{ type: 'TextFilter' }}
+                                        dataSort>
+                                        Part Status
                                     </TableHeaderColumn>
                                     <TableHeaderColumn
                                         dataField='cost'
