@@ -3,6 +3,7 @@ import claimService from '../../services/claim.service';
 // import ReactDataGrid from 'react-data-grid';
 import { Link } from 'react-router-dom';
 import { Icon, Popup } from 'semantic-ui-react';
+import '../../Stylesheets/container.css';
 
 const data2 = {};
 class claimDetail extends Component {
@@ -54,7 +55,7 @@ class claimDetail extends Component {
         }
 
         return (
-            <div className='container-fluid'>
+            <div className='container-fluid container_position'>
                 <br />
                 <div>
                     <Link to={this.props.history.goBack}>

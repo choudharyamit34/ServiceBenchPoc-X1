@@ -3,7 +3,7 @@ import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import claimService from '../../services/claim.service';
 import { Link } from 'react-router-dom';
 import { Icon, Popup } from 'semantic-ui-react';
-
+import '../../Stylesheets/container.css';
 
 const data = [];
 class ClaimListTable extends Component {
@@ -76,7 +76,7 @@ class ClaimListTable extends Component {
     };
 
     return (
-      <div className="container-fluid">
+      <div className="container-fluid container_position">
          <br />
                 <div>
                     <Link to={this.props.history.goBack}>

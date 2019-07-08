@@ -5,13 +5,13 @@ import PartsPieChart from './partChart';
 import {CardColumns} from 'reactstrap';
 import {Link} from 'react-router-dom';
 
+var chartMargintop= {marginTop:`4%` };
 class ChartComponent extends Component {
     render() {
         const {history}=this.props;
         // console.log('props in Chart component',history);
         return (
-            <div className="container">
-                <h1 className="my-4">Welcome to Service Bench</h1>
+            <div className={chartMargintop} >
                 {/* <!-- Marketing Icons Section --> */}
                 <div className="row">
                     <div className="col-lg-4 mb-4">

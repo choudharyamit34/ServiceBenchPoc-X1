@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import serviceJobService from '../../../services/serviceJob.service';
 import { Icon, Popup } from 'semantic-ui-react';
+import '../../../Stylesheets/container.css';
 
 const data = [];
 class ServiceJobListTable extends Component {
@@ -82,7 +83,7 @@ class ServiceJobListTable extends Component {
     };
 
     return (
-      <div className="container-fluid">
+      <div className="container-fluid container_position">
         <br />
         <div>
           <Link to={this.props.history.goBack}>

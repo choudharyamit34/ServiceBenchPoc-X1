@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Icon, Popup } from 'semantic-ui-react';
+import '../../../Stylesheets/container.css';
 
 class ServiceJobInput extends Component {
     constructor(props) {
@@ -63,7 +64,7 @@ class ServiceJobInput extends Component {
         console.log(this.history);
         console.log(this.props);
         return (
-            <div className="container-fluid">
+            <div className="container-fluid container_position">
                 <br/>
                 <div>
                     <Link to={this.props.history.goBack}>

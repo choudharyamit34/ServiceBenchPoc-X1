@@ -3,6 +3,8 @@ import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import partService from '../../services/part.service.js';
 import { Link } from 'react-router-dom';
 import { Icon, Popup } from 'semantic-ui-react';
+import '../../Stylesheets/container.css';
+
 
 class PartList extends Component {
     constructor(props) {
@@ -52,7 +54,7 @@ class PartList extends Component {
         };
 
         return (
-            <div className="container-fluid">
+            <div className="container-fluid container_position">
                 <br />
                 <div>
                     <Link to={this.props.history.goBack}>

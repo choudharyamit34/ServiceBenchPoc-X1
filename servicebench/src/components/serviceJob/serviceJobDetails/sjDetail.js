@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import serviceJobService from '../../../services/serviceJob.service';
 import { Link } from 'react-router-dom';
 import { Icon, Popup } from 'semantic-ui-react';
+import '../../../Stylesheets/container.css';
 const data2 = {};
 class SjDetail extends Component {
     constructor() {
@@ -51,7 +52,7 @@ class SjDetail extends Component {
         }
 
         return (
-            <div className="container-fluid">
+            <div className="container-fluid container_position">
                 <br />
                 <div>
                     <Link to={this.props.history.goBack}>
