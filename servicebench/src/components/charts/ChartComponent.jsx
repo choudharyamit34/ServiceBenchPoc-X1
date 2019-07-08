@@ -48,43 +48,8 @@ class ChartComponent extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-lg-4 mb-4">
-                        <div className="card h-100">
-                            <h4 className="card-header">Service Jobs</h4>
-                            <CardColumns>
-                                <SjPieChart history={history}/>
-                            </CardColumns>
-                            <div className="card-footer">
-                                <Link to="/serviceJobs" className="btn btn-primary">Show More</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 mb-4">
-                        <div className="card h-100">
-                            <h4 className="card-header">Claims</h4>
-                            <CardColumns>
-                                <ClaimPieChart history={history} />
-                            </CardColumns>
-                            <div className="card-footer">
-                            <Link to="/claims" className="btn btn-primary">Show More</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 mb-4">
-                        <div className="card h-100">
-                            <h4 className="card-header">Parts</h4>
-                            <CardColumns>
-                                <PartsPieChart  history={history}/>
-                            </CardColumns>
-                            <div className="card-footer">
-                            <Link to="/parts" className="btn btn-primary">Show More</Link>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
-            
-            </div>
         );
     }
 }

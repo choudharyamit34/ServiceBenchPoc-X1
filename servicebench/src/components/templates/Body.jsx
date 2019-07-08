@@ -12,6 +12,8 @@ import PartList from '../part/partList';
 import PartDetail from '../part/partDetail';
 import ServiceJobInput from '../serviceJob/serviceJobInput/ServiceJobInput';
 import LoginComponent from '../login/LoginComponent';
+import ServiceProvider from '../serviceProviders/jsx/serviceProvider';
+import SpDashBoard from '../serviceProviders/jsx/spDashBoard';
 const Body = () => (
 
   <Switch history={history}>
@@ -21,6 +23,8 @@ const Body = () => (
     <Route path='/home' component={Home1} />
     <Route path='/serviceJobs' component={ServiceJobListTable} history={history} />
     <Route path='/serviceJobDetail' component={SjDetail} history={history} />
+    <Route path='/serviceProviders' component={ServiceProvider} history={history} />
+    <Route path='/spDashboard' component={SpDashBoard} history={history} />
     <Route path='/claims' component={ClaimListTable} />
     <Route path='/claimDetail' component={ClaimDetail} history={history} />
     <Route path='/parts' component={PartList} />

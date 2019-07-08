@@ -122,6 +122,14 @@ class ClaimListTable extends Component {
                     Claim Type
                   </TableHeaderColumn>
                   <TableHeaderColumn
+                    dataField='serviceProvicerId'                  
+                    width="15%"
+                    dataSort
+                    filter={{ type: 'TextFilter' }}
+                  >
+                    Service Provider
+                  </TableHeaderColumn>
+                  <TableHeaderColumn
                     dataField='claimDate'
                     width="15%"
                     filter={{ type: 'TextFilter' }}
