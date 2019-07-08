@@ -12,31 +12,54 @@ class LoginComponent extends Component {
             username: "",
             password: "",
             formErrors: { username: '', password: '' },
-            usernameValid: false,
+            usernameValid: true,
             passwordValid: false,
             formValid: false,
+            userValid:false,
             user: {}
         };
         this.login = this.login.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);       
     }
 
     login(e) {
+        
         e.preventDefault();
-       
-        userAuthenticator.getUserByUserName(this.state.username).then((data) => {
-            if(this.state.username != data[0].userName){ 
-                this.setState({message : "Invalid User Name"});
-            }else if(this.state.password != data[0].password){
-                    this.setState({message : "Invalid Password"});
+        const userName = this.state.username;      
+        console.log('username in login ', userName);
+        console.log('state in Login method', this.state);
+        
+        userAuthenticator.getUserByUserName(userName).then((data) => {
+            console.log('Data fetched in login method ', data);
+            let userRecieved = {};
+            if (Array.isArray(data)) {
+                userRecieved = data[0];
+            } else {
+                userRecieved = data;
             }
-           else{
-            this.setState({user : data[0]})
-            this.props.history.push(`/home`);
-           }
-                  
+            if (null != userRecieved) {
+                console.log("userRecieved", userRecieved);
+                if (this.state.password != userRecieved.password) {
+                    this.setState({
+                        message: "Invalid Password",
+                        userValid: false
+                    });
+                   
+                }
+                else{
+                    this.setState({
+                        message: "Login Successfull",
+                        userValid: true
+                    }); 
+                }
+            }else{               
+                this.setState({
+                    message: "Invalid User Name",
+                    userValid: false
+                });
+                
+            }            
         });
-
     }
 
     handleChange(e) {
@@ -79,6 +102,9 @@ class LoginComponent extends Component {
     render() {
         const { from } = this.props.location.state || { from: { pathname: "/" } };
         const { redirectToReferrer } = this.state;
+        if (this.state.userValid ==true) {
+            this.props.history.push(`/home`);
+        }   
 
         if (redirectToReferrer) {
             return <Redirect to={from} />
