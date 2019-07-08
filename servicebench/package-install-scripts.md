@@ -27,3 +27,6 @@ npm install --save semantic-ui-react
 #to load react-bootstrap form
 #v1.0.0-beta.9 is compatible with bootstrap 4
 npm install --save react-bootstrap
+
+## for react bar chart 
+npm install --save react-bar-chart
