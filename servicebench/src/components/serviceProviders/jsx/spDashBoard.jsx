@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import SpChartComponent from '../charts/SpChartComponent';
 import ChartComponent from '../../charts/ChartComponent';
+import '../../../Stylesheets/container.css';
+
 
  class SpDashBoard extends Component {
      
@@ -19,7 +21,7 @@ import ChartComponent from '../../charts/ChartComponent';
     }
     console.log('props array ',propsArray);
     return (
-      <React.Fragment>
+      <React.Fragment className="container-fluid container_position">
         {/* <SpChartComponent   history={history} /> */}
         <ChartComponent  history={history} />
       </React.Fragment>

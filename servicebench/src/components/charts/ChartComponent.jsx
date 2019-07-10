@@ -4,14 +4,13 @@ import ClaimPieChart from './claimChart';
 import PartsPieChart from './partChart';
 import {CardColumns} from 'reactstrap';
 import {Link} from 'react-router-dom';
-
-var chartMargintop= {marginTop:`4%` };
+import '../../Stylesheets/container.css';
 class ChartComponent extends Component {
     render() {
         const {history}=this.props;
         // console.log('props in Chart component',history);
         return (
-            <div className={chartMargintop} >
+            <div className="container-fluid container_position" >
                 {/* <!-- Marketing Icons Section --> */}
                 <div className="row">
                     <div className="col-lg-4 mb-4">

@@ -5,6 +5,7 @@ import ClaimPieChart from './claimChart';
 import PartsPieChart from './partChart';
 import {CardColumns} from 'reactstrap';
 import {Link} from 'react-router-dom';
+import '../../../Stylesheets/container.css';
 
 class SpChartComponent extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class SpChartComponent extends Component {
         // console.log('props in Chart component',history);
         return (
             
-                <div className="row">                    
+                <div className="container-fluid container_position">                    
                         <h4 className="card-header">Service Jobs</h4>
                         <CardColumns>
                             {/* <MainChart history={history}/> */}
