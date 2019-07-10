@@ -142,7 +142,7 @@ class ServiceJobListTable extends Component {
                     Service Job Date
                   </TableHeaderColumn>
                   <TableHeaderColumn
-                    dataField='serviceProvicerId'                  
+                    dataField='serviceProviderId'                  
                     width="15%"
                     dataSort
                     filter={{ type: 'TextFilter' }}
