@@ -2,7 +2,24 @@ import React, { Component } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import userAuthenticator from '../../services/userAuthenticator.service';
 import { Redirect } from 'react-router-dom';
+import '../login/login.css';
+import loginBgImage from '../../resources/imgs/SB_loginbg_computer.png';
+import LogoImage from '../../resources/imgs/SB_logo.png';
 
+var logoStyle = {
+    background: `url(${LogoImage})`,
+    width: `22.5%`,
+    height: 80,
+    marginTop: `-22px`,
+    cursor: 'pointer'
+
+}
+var loginBgStyle = {
+    background: `url(${loginBgImage})`,
+    height: `100%`,
+    width: `100%`,
+    
+}
 class LoginComponent extends Component {
     constructor(props) {
         super(props);
@@ -111,10 +128,14 @@ class LoginComponent extends Component {
         }
 
         return (
-            <div>
-                <h1 className="text-info">Servicebench Login</h1>
-                {this.state.message ? <h4 className="alert alert-danger">{this.state.message}</h4> : null}
-                <div>
+            <div style={loginBgStyle}>
+                <div className ="loginHeaderBackground">
+                 <div style={logoStyle}/>
+                 </div>
+                 <div className ="loginErrorContainer">
+                  {this.state.message ? <h4 className="alert alert-danger">{this.state.message}</h4> : null}
+                 </div>
+                <div class="loginwidget">
                     <Form onSubmit={this.login}>
                         <Form.Group controlId="username">
                             <Form.Label>Username</Form.Label>
@@ -128,12 +149,12 @@ class LoginComponent extends Component {
                                 onChange={this.handleChange} />
                             {this.state.formErrors.password ? <Form.Text className="text-danger">{this.state.formErrors.password}</Form.Text> : null}
                         </Form.Group>
-                        <Button block disabled={!this.state.formValid} type="submit">
+                        <Button block disabled={!this.state.formValid} type="submit" size="sm">
                             Login
                         </Button>
                     </Form>
                 </div>
-            </div>
+               </div>
         );
     }
 }
