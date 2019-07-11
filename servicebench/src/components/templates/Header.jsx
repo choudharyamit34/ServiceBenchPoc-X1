@@ -47,8 +47,8 @@ const Header = () => (
                         <Icon name='edit' size='big' className="colorLogo" /><br />Registrations</Link></li>
                     <li className="nav-item" className="headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link' to='/home'>
                         <Icon name='book' size='big' className="colorLogo" /><br />Reports</Link></li>
-                    <li className="nav-item" className="headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link' to='/login'>
-                        <Icon name='book' size='big' className="colorLogo" /><br />Logout</Link></li>
+                    <li className="nav-item" className="headerIcon"  style={{ textAlign: "center", marginLeft:"70%"}}><Link className='nav-link' to='/login'>
+                        <Icon name='share square outline' size='big' className="colorLogo" /><br />Logout</Link></li>
                 </ul>
             </div>
         </nav>
