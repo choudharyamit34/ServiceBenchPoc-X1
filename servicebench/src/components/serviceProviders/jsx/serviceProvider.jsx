@@ -65,7 +65,7 @@ import serviceProviderService from '../../../services/serviceProvider.service';
         };
     
         return (
-          <div className="container-fluid">
+          <div className="container-fluid margin_top_5_per">
             <br />
             <div>
               <Link to={this.props.history.goBack}>

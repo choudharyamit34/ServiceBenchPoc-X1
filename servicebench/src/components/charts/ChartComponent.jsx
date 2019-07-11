@@ -10,7 +10,7 @@ class ChartComponent extends Component {
         const {history}=this.props;
         // console.log('props in Chart component',history);
         return (
-            <div className="container-fluid container_position" >
+            <div className="container-fluid container_position padding_top_15_px" >
                 {/* <!-- Marketing Icons Section --> */}
                 <div className="row">
                     <div className="col-lg-4 mb-4">
