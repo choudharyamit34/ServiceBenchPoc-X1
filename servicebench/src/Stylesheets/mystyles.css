@@ -34,3 +34,18 @@ img{
 .marginTop_minus_21{
     margin-top: -21px;
 }
+.marginTop_minus_10{
+    margin-top: -10px;
+}
+.height_80_px{
+    height: 80px;
+}
+body{
+    height: 650px !important ;
+}
+.padding_top_15_px{
+ padding-top: 15px
+}
+.margin_top_5_per{
+    margin-top: 5%;
+}

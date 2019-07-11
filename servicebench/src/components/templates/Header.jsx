@@ -20,7 +20,7 @@ var headerMenuColor = {
 
 const Header = () => (
     <header>
-        <nav className="navbar navbar-expand-lg navbar-dark  height_75_px header_position marginTop_minus_21">
+        <nav className="navbar navbar-expand-lg navbar-dark  height_75_px header_position marginTop_minus_10 height_80_px">
             <button type="button" data-target="#navbarCollapse"
                 data-toggle="collapse" className="navbar-toggler">
                 <span className="navbar-toggler-icon"></span>
@@ -40,15 +40,15 @@ const Header = () => (
                     <li className="nav-item" className="headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link' to='/claims'>
                         <Icon name='file alternate' size='big' className="colorLogo" /><br />Claims</Link></li>
                     <li className="nav-item" className="headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link' to='/serviceProviders'>
-                        <Icon name='copy' size='big' className="colorLogo" /><br />Service Providers</Link></li>
+                        <Icon name='users' size='big' className="colorLogo" /><br />Service Providers</Link></li>
                     <li className="nav-item" className="headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link' to='/home'>
                         <Icon name='handshake' size='big' className="colorLogo" /><br />Contracts</Link></li>
                     <li className="nav-item" className="headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link' to='/home'>
                         <Icon name='edit' size='big' className="colorLogo" /><br />Registrations</Link></li>
                     <li className="nav-item" className="headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link' to='/home'>
                         <Icon name='book' size='big' className="colorLogo" /><br />Reports</Link></li>
-                    <li className="nav-item" className="headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link' to='/login'>
-                        <Icon name='book' size='big' className="colorLogo" /><br />Logout</Link></li>
+                    <li className="nav-item" className="headerIcon"  style={{ textAlign: "center", marginLeft:"70%"}}><Link className='nav-link' to='/login'>
+                        <Icon name='sign out' size='big' className="colorLogo" /><br />Logout</Link></li>
                 </ul>
             </div>
         </nav>
