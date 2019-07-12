@@ -33,3 +33,6 @@ npm install --save react-bar-chart
 
 ##for react bootstrap Modal ..exp : logout popout confirmation box.
 npm install --save react-bootstrap-modal
+
+##for react datepicker
+npm install --save react-datepicker
