@@ -83,6 +83,7 @@ class ClaimListTable extends Component {
                     <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
                         className="colorLogo" onClick={this.props.history.goBack}/>}/>
                     </Link>
+                    <h2>Claims</h2>
                 </div>
         <br />
         <div className="row">
@@ -101,7 +102,7 @@ class ClaimListTable extends Component {
                   <TableHeaderColumn
                     dataField='claimNumber'
                     isKey
-                    width="15%"
+                    width="11%"
                     dataSort
                     filter={{ type: 'TextFilter' }}
                     >
@@ -109,21 +110,21 @@ class ClaimListTable extends Component {
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='claimStatus'
-                    width="15%"
+                    width="11%"
                     filter={ { type: 'TextFilter'} }
                     dataSort>
                     Claim Status
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='claimType'
-                    width="15%"
+                    width="11%"
                     filter={ { type: 'TextFilter'} }
                     dataSort>
                     Claim Type
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='serviceProvicerId'                  
-                    width="15%"
+                    width="11%"
                     dataSort
                     filter={{ type: 'TextFilter' }}
                   >
@@ -131,7 +132,7 @@ class ClaimListTable extends Component {
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='claimDate'
-                    width="15%"
+                    width="12%"
                     filter={{ type: 'TextFilter' }}
                     dataSort>
                     Claim Date
@@ -139,14 +140,14 @@ class ClaimListTable extends Component {
                   <TableHeaderColumn
                     dataField='customerFirstName'
                     filter={ { type: 'TextFilter'} }
-                    width="15%"
+                    width="11%"
                     dataSort>
                     First Name
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='customerLastName'
                     filter={ { type: 'TextFilter'} }
-                    width="15%">
+                    width="11%">
                     Last Name
                   </TableHeaderColumn>
                   <TableHeaderColumn

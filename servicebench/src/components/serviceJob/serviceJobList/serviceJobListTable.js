@@ -6,6 +6,10 @@ import { Icon, Popup } from 'semantic-ui-react';
 import '../../../Stylesheets/container.css';
 
 const data = [];
+var tableCaptionCentred = {
+  marginLeft:`10%`
+
+}
 class ServiceJobListTable extends Component {
   constructor() {
     super();
@@ -85,7 +89,8 @@ class ServiceJobListTable extends Component {
     return (
       <div className="container-fluid container_position">
         <br />
-        <div>
+        <div>  
+          <td>      
           <Link to={this.props.history.goBack}>
            <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
                         className="colorLogo" onClick={this.props.history.goBack}/>}/>
@@ -94,6 +99,8 @@ class ServiceJobListTable extends Component {
             <Popup content="Add ServiceJob" trigger={<Icon name='plus square circle left' size='big' 
                         className="colorLogo" />}/>          
           </Link>
+          </td>  
+          <td style={tableCaptionCentred}>  <h2>Service Jobs</h2>   </td>              
         </div>
         <br />
         <div className="row">
@@ -112,7 +119,7 @@ class ServiceJobListTable extends Component {
                   <TableHeaderColumn
                     dataField='serviceJobNumber'
                     isKey
-                    width="15%"
+                    width="13%"
                     dataSort
                     filter={{ type: 'TextFilter' }}
                   >
@@ -120,7 +127,7 @@ class ServiceJobListTable extends Component {
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='serviceJobStatus'
-                    width="15%"
+                    width="12%"
                     dataSort
                     filter={{ type: 'TextFilter' }}
                   >
@@ -128,7 +135,7 @@ class ServiceJobListTable extends Component {
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='serviceJobType'
-                    width="15%"
+                    width="11%"
                     filter={{ type: 'TextFilter' }}
                     dataSort>
                     Service Job Type
@@ -143,7 +150,7 @@ class ServiceJobListTable extends Component {
                   </TableHeaderColumn>
                   <TableHeaderColumn
                     dataField='serviceProviderId'                  
-                    width="15%"
+                    width="12%"
                     dataSort
                     filter={{ type: 'TextFilter' }}
                   >
@@ -152,7 +159,7 @@ class ServiceJobListTable extends Component {
                   <TableHeaderColumn
                     dataField='customerFirstName'
                     filter={{ type: 'TextFilter' }}
-                    width="15%"
+                    width="10%"
 
                     dataSort>
                     First Name
@@ -160,7 +167,7 @@ class ServiceJobListTable extends Component {
                   <TableHeaderColumn
                     dataField='customerLastName'
                     filter={{ type: 'TextFilter' }}
-                    width="15%">
+                    width="10%">
                     Last Name
                   </TableHeaderColumn>
                   <TableHeaderColumn
