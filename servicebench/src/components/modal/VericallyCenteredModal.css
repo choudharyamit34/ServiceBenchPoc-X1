@@ -1,0 +1,10 @@
+.btn-primary:hover {
+      color: #fff;
+      background-color:#ecb215;
+      border:0;
+    }
+
+ .logoutModel {
+   width: 35%;
+   margin-left: 32%;
+}

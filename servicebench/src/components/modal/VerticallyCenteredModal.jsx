@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal,Button } from 'react-bootstrap';
+import '../modal/VericallyCenteredModal.css';
 class VerticallyCenteredModal extends Component {
   constructor(props) {
     super(props)
@@ -23,7 +24,7 @@ closeHandler(e){
     render() {
 this.history={... this.props.history};
       return (
-        <Modal
+        <Modal className="logoutModel"
           {...this.props.show}
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
@@ -41,8 +42,8 @@ this.history={... this.props.history};
             </p>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.logoutHandler}>Logout</Button>
-            <Button onClick={this.closeHandler}>Close</Button>
+            <Button className="btn_gray" onClick={this.logoutHandler}>Logout</Button>
+            <Button className="btn_gray" onClick={this.closeHandler}>Close</Button>
           </Modal.Footer>
         </Modal>
       );

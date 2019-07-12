@@ -55,3 +55,11 @@ body{
 .marginTop_minus_1_per{
     margin-top : -0.99%;
 }
+.btn_yellow{
+    background-color:#ecb215;
+    border-color: #ecb215;
+}
+.btn_gray{
+    background-color:gray;
+    border-color: gray;    
+}
