@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Icon, Popup } from 'semantic-ui-react';
 import '../../../Stylesheets/container.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -117,9 +119,13 @@ class ServiceJobInput extends Component {
         const { validated } = this.state;
         this.history = { ...this.props.history };
         return (
-            <div className="container-fluid">
+            <div className="container-fluid container_position">
+                <br />
                 <div>
-                    <button className="btn btn-primary" onClick={this.props.history.goBack}>Go Back</button>
+                    <Link to={this.props.history.goBack}>
+                        <Popup content="Back" trigger={<Icon name='arrow circle left' size='big'
+                            className="colorLogo" onClick={this.props.history.goBack} />} />
+                    </Link>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
