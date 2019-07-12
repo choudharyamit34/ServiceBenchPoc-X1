@@ -49,3 +49,9 @@ body{
 .margin_top_5_per{
     margin-top: 5%;
 }
+.transition_0_3{
+    transition: 0.3s;
+}
+.marginTop_minus_1_per{
+    margin-top : -0.99%;
+}
