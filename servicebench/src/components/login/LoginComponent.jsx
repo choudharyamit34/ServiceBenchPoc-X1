@@ -135,7 +135,7 @@ class LoginComponent extends Component {
                  <div className ="loginErrorContainer">
                   {this.state.message ? <h4 className="alert alert-danger">{this.state.message}</h4> : null}
                  </div>
-                <div class="loginwidget">
+                <div className="loginwidget">
                     <Form onSubmit={this.login}>
                         <Form.Group controlId="username">
                             <Form.Label>Username</Form.Label>
