@@ -130,13 +130,9 @@ class LoginComponent extends Component {
 
         return (
             <div style={loginBgStyle} className="image_no_background_repeat">
-                <div className ="loginHeaderBackground ">
-                 <div style={logoStyle}/>
-                 </div>
-                 <div className ="loginErrorContainer">
-                  {this.state.message ? <h4 className="alert alert-danger">{this.state.message}</h4> : null}
-                 </div>
+                
                 <div className="loginwidget">
+                {this.state.message ? <h4 className="alert alert-danger">{this.state.message}</h4> : null}
                     <Form onSubmit={this.login}>
                         <Form.Group controlId="username">
                             <Form.Label >User Name</Form.Label>
@@ -150,8 +146,17 @@ class LoginComponent extends Component {
                                 onChange={this.handleChange} />
                             {this.state.formErrors.password ? <Form.Text className="text-danger">{this.state.formErrors.password}</Form.Text> : null}
                         </Form.Group>
-                        <Button block disabled={!this.state.formValid} type="submit" size="sm">
+                        <br></br>
+                        <Button block disabled={!this.state.formValid} type="submit" size="sm" width="25">
                             Login
+                        </Button>
+                        <br></br>
+                        <Button block disabled={!this.state.formValid}  size="sm">
+                            Sign Up
+                        </Button>
+                        <br></br>
+                        <Button block disabled={!this.state.formValid}  size="sm">
+                            Forgot Password
                         </Button>
                     </Form>
                 </div>

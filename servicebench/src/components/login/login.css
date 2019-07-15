@@ -6,9 +6,9 @@
 .loginFormContainer{
     background-color: #ffffcc;
     align-self: center;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 10%;
+    margin-left: 63%;
+    margin-right: 30%;
+    margin-top: 17%;
     margin-bottom: 10%;
 }
 .textFiedComponant{
@@ -26,16 +26,16 @@
     padding: 30px 0 15px 8px;
     border-radius: 10px;
     color: #fff;
-    border: 2px solid #ffe26c;
+    border: 2px solid black;
         align-self: center;
-    margin-left: 62.5%;
+    margin-left: 63.5%;
     margin-right: 30%;
-    margin-top: 19%;
+    margin-top: 17%;
     margin-bottom: 10%;
-    min-height: 20%;
-    background-color: grey;
-    width:23%;
-    height:40% ;
+    min-height: 22%;
+    background-color: black;
+    width:20.5%;
+    height:57% ;
 }
 .greyback {
     background: #39342e;
