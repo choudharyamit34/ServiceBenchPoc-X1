@@ -129,10 +129,10 @@ class LoginComponent extends Component {
         }
 
         return (
-            <div style={loginBgStyle} className="image_no_background_repeat">
-                
+            <div style={loginBgStyle} className="image_no_background_repeat">  
+              <div style={logoStyle}></div>
                 <div className="loginwidget">
-                {this.state.message ? <h4 className="alert alert-danger">{this.state.message}</h4> : null}
+                 {this.state.message ? <h4 className="alert alert-danger">{this.state.message}</h4> : null}
                     <Form onSubmit={this.login}>
                         <Form.Group controlId="username">
                             <Form.Label >User Name</Form.Label>
