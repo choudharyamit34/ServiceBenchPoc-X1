@@ -123,7 +123,7 @@ class ClaimListTable extends Component {
                     Claim Type
                   </TableHeaderColumn>
                   <TableHeaderColumn
-                    dataField='serviceProvicerId'                  
+                    dataField='serviceProviderId'                  
                     width="11%"
                     dataSort
                     filter={{ type: 'TextFilter' }}
