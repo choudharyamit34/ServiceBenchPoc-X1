@@ -10,7 +10,9 @@ var logoStyle = {
     width: `22.5%`,
     height: 80,
     marginTop: `-22px`,
-    cursor: 'pointer'
+    cursor: 'pointer',
+    backgroundRepeat: `no-repeat`
+
 
 }
 var headerMenuColor = {
