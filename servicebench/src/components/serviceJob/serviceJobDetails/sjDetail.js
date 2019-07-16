@@ -66,9 +66,10 @@ class SjDetail extends Component {
                             </Link>                    
                     </td>
                     <td className="h2_td_details" >
-                         <h2  className='h2_details'> Service Job Details</h2> 
+                         <h2  className='h2_details'> Service Job Details - {data.serviceJobNumber}</h2> 
                    </td>
-                </div>               
+                </div>  
+                <br></br>             
                 <div >
                     <table className='table table-bordered '>
                         <tbody>

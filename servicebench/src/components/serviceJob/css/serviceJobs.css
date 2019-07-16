@@ -3,36 +3,82 @@
     min-width: 100%;
     font-size: 22px;
 }
+/*START - Table hiver for Headers of Data table on Sj list page  */
+.table{
+    margin-bottom: 0px !important;
+    margin-top:0px !important;
+}
+table.table-hover{
+    border:1px solid black;
+    margin-top:1px;
+  }
+table.table-hover > thead > tr > th{
+    border:1px solid  grey;
+}
+table.table-hover > tbody > tr {
+    border:1px solid grey;
+}
+table.table-hover > tbody > tr > td{
+    border:1px solid grey;
+}
+
+/*END - Table hover for Headers of Data table on Sj list page */
+/*START - Table stripped for Body of Data table on Sj list page  */
+table.table-striped{
+    border:1px solid black;
+    margin-top:0px;
+  }
+table.table-striped > thead > tr > th{
+    border:1px solid grey;
+}
+table.table-striped > tbody > tr {
+    border:1px solid grey;
+}
+table.table-striped > tbody > tr > td{
+    border:1px solid grey;
+}
+
+/*END - Table strippes for Data table on Sj list page  */
+/*START - Table bordered styles used in Sj details page */
 table.table-bordered{
     border:1px solid grey;
     margin-top:20px;
   }
 table.table-bordered > thead > tr > th{
-    border:2px solid grey;
+    border:2px solid black;
 }
 table.table-bordered > tbody > tr {
     border:2px solid black;
 }
 table.table-bordered > tbody > tr > td{
-    border:1px solid grey;
+    border:2px solid grey;
 }
 
+/*START - Custom Background colors for table on  Sj detailspage */
 table.table-bordered > tbody >tr>td:nth-child(odd) {
-    background-color: grey;
+    
 }
 table.table-bordered > tbody >tr>td:nth-child(even) {
-    background-color: #ccff33;
+   
 }
+table.table-bordered > tbody >tr>td:nth-child(odd)>b {
+    font-size: 15px;
+}
+/*START - Custom Background colors for table on  Sj detailspage  */
 
+/*START - Custom css for pageCaption of  Sj details/List page */
 .h2_td_caption_jobs{   
     width: 90% !important;
 }
 .h2_caption_jobs{
-    margin-left: 50% !important;
+    margin-left: 70% !important;
 }
 .h2_td_details{   
     width: 130% !important;
 }
 .h2_details{
-    margin-left: 30% !important;
+    margin-left: 40% !important;
 }
+/*START -  Custom css for pageCaption of  Sj details/List page  */
+
+/*END - Table bordered styles used in Sj details page */
