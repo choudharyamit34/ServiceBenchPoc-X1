@@ -77,15 +77,19 @@ class ClaimListTable extends Component {
 
     return (
       <div className="container-fluid container_position">
-         <br />
-                <div>
+         <br/>
+           <div>
+                  <td>                 
                     <Link to={this.props.history.goBack}>
                     <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
                         className="colorLogo" onClick={this.props.history.goBack}/>}/>
                     </Link>
-                    <h2>Claims</h2>
-                </div>
-        <br />
+                    </td>
+                    <td className="h2_td_details" >
+                         <h2  className='h2_details'> Claims </h2> 
+                   </td>
+                </div>  
+                <br></br>   
         <div className="row">
           <div className="col-md-12">
             <div className="card">
@@ -156,7 +160,6 @@ class ClaimListTable extends Component {
                     width="30%">
                     Claim Submitted Date
                   </TableHeaderColumn>
-                  <TableHeaderColumn width="20%"></TableHeaderColumn>
                 </BootstrapTable>
               </div>
             </div>

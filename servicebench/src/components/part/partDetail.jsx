@@ -30,27 +30,44 @@ class PartDetail extends Component {
             <div className='container-fluid container_position'>
                 <br />
                 <div>
-                    <Link to={this.props.history.goBack}>
-                     <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
-                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
-                    </Link>
+                <td>
+                        <Link to={this.props.history.goBack}>
+                            <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                                className="colorLogo" onClick={this.props.history.goBack}/>}/>
+                            </Link>                    
+                    </td>
+                    <td className="h2_td_details" >
+                         <h2  className='h2_details'> Parts Detail - {part.partNumber} </h2> 
+                   </td>
                 </div>
                 <br />
                 <div >
-                    <table className='table table-bordered table-dark '>
+                    <table className='table table-bordered  '>
                         <tbody>
                             <tr>
-                                <td ><label >Part Number</label></td>
+                                <td ><b >Part Number</b></td>
                                 <td>{part.partNumber}</td>
-                                <td>Part Type</td>
+                                <td><b>Part Type</b></td>
                                 <td>{part.partType}</td>
                             </tr>
 
                             <tr>
-                                <td>Part Status</td>
+                                <td><b>Serial Number</b></td>
+                                <td>{part.serialNumber}</td>
+                                <td><b>Model Number</b></td>
+                                <td>{part.modelNumber}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Part Status</b></td>
                                 <td>{part.partStatus}</td>
-                                <td>Cost</td>
+                                <td><b>Cost</b></td>
                                 <td>{part.cost}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Ordered By </b></td>
+                                <td>{part.serviceProviderId}</td>   
+                                <td></td>      
+                                <td></td>                          
                             </tr>
                         </tbody>
                     </table>

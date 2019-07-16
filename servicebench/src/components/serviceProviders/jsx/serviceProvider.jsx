@@ -69,14 +69,16 @@ import serviceProviderService from '../../../services/serviceProvider.service';
           <div className="container-fluid margin_top_5_per">
             <br />
             <div>
-              <Link to={this.props.history.goBack}>
-               <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
-                            className="colorLogo" onClick={this.props.history.goBack}/>}/>
-              </Link>
-              <Link to="/addServiceJob">
-                <Popup content="Add ServiceJob" trigger={<Icon name='plus square circle left' size='big' 
-                            className="colorLogo" />}/>          
-              </Link>
+            <td>
+              
+                  <Link to={this.props.history.goBack}>
+                    <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
+                   </Link>                    
+            </td>
+              <td className="h2_td_details" >
+                      <h2  className='h2_details'> Service Providers  </h2> 
+             </td>
             </div>
             <br />
             <div className="row">

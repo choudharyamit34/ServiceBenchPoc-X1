@@ -55,59 +55,64 @@ class claimDetail extends Component {
         }
 
         return (
-            <div className='container-fluid container_position'>
-                <br />
+            <div className='container-fluid container_position'>              
                 <div>
-                    <Link to={this.props.history.goBack}>
-                    <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
-                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
-                    </Link>
-                </div>
-                <br />
+                    <br></br>
+                   <td>
+                        <Link to={this.props.history.goBack}>
+                            <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                                className="colorLogo" onClick={this.props.history.goBack}/>}/>
+                            </Link>                    
+                    </td>
+                    <td className="h2_td_details" >
+                         <h2  className='h2_details'> Claim Detail - {data.claimNumber} </h2> 
+                   </td>
+                </div>  
+                <br></br>             
                 <div >
-                    <table className='table table-bordered table-dark '>
+                    <table className='table table-bordered  '>
                         <tbody>
                             <tr>
-                                <td ><label >Claim Number</label></td>
+                                <td ><b >Claim Number</b></td>
                                 <td>{data.claimNumber}</td>
-                                <td>Claim Type</td>
+                                <td><b>Claim Type</b></td>
                                 <td>{data.claimType}</td>
                             </tr>
 
                             <tr>
-                                <td>Claim Date</td>
+                                <td><b>Claim Date</b></td>
                                 <td>{data.claimDate}</td>
-                                <td>Submitted Date</td>
+                                <td><b>Submitted Date</b></td>
                                 <td>{data.claimSubmittedDate}</td>
                             </tr>
                             <tr>
-                                <td>First Name</td>
+                                <td><b>First Name</b></td>
                                 <td>{data.customerFirstName}</td>
-                                <td>Last name</td>
+                                <td><b>Last name</b></td>
                                 <td>{data.customerLastName}</td>
                             </tr>
                             <tr>
-                                <td>Mobile Phone</td>
+                                <td><b>Mobile Phone</b></td>
                                 <td>{data.mobilePhone}</td>
-                                <td>Home Phone</td>
+                                <td><b>Home Phone</b></td>
                                 <td>{data.homePhone}</td>
                             </tr>
                             <tr>
-                                <td>City</td>
+                                <td><b>City</b></td>
                                 <td>{data.city}</td>
-                                <td>State</td>
+                                <td><b>State</b></td>
                                 <td>{data.state}</td>
                             </tr>
                             <tr>
-                                <td>Postal Code</td>
+                                <td><b>Postal Code</b></td>
                                 <td>{data.postalCode}</td>
-                                <td>Addrerss Line 1 </td>
+                                <td><b>Addrerss Line 1</b> </td>
                                 <td>{data.addLine1}</td>
                             </tr>
                             <tr>
-                                <td>Address Line 2</td>
+                                <td><b>Address Line 2</b></td>
                                 <td>{data.addLine2}</td>
-                                <td>Addrerss Line 3 </td>
+                                <td><b>Addrerss Line 3 </b></td>
                                 <td>{data.addLine3}</td>
                             </tr>
 

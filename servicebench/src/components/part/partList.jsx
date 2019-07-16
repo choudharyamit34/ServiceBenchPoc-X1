@@ -38,7 +38,7 @@ class PartList extends Component {
         const { parts } = this.state;
         const history = this.props.history;
         const options = {
-            sizePerPage: 10,
+            sizePerPage: 5,
             prePage: 'Previous',
             nextPage: 'Next',
             firstPage: 'First',
@@ -57,10 +57,14 @@ class PartList extends Component {
             <div className="container-fluid container_position">
                 <br />
                 <div>
-                    <Link to={this.props.history.goBack}>
-                        <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
-                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
-                    </Link>
+                <td><Link to={this.props.history.goBack}>
+                            <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                                className="colorLogo" onClick={this.props.history.goBack}/>}/>
+                            </Link>                    
+                    </td>
+                    <td className="h2_td_details" >
+                         <h2  className='h2_details'> Parts </h2> 
+                   </td>
                 </div>
                 <br />
                 <div className="row">
@@ -81,8 +85,23 @@ class PartList extends Component {
                                         isKey
                                         width="15%"
                                         dataSort
+                                        filter={{ type: 'TextFilter' }}
                                     >
                                         Part Number
+                                    </TableHeaderColumn>
+                                    <TableHeaderColumn
+                                        dataField='modelNumber'
+                                        width="15%"
+                                        filter={{ type: 'TextFilter' }}
+                                        dataSort>
+                                         Model Number
+                                    </TableHeaderColumn>
+                                    <TableHeaderColumn
+                                        dataField='serialNumber'
+                                        width="15%"
+                                        filter={{ type: 'TextFilter' }}
+                                        dataSort>
+                                        Serial Number
                                     </TableHeaderColumn>
                                     <TableHeaderColumn
                                         dataField='partType'
@@ -104,6 +123,7 @@ class PartList extends Component {
                                         dataSort>
                                         Part Cost
                                     </TableHeaderColumn>
+                                    
                                 </BootstrapTable>
                             </div>
                         </div>

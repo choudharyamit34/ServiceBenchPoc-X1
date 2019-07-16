@@ -120,9 +120,7 @@ class ServiceJobListTable extends Component {
         <div className="row">
           <div className="col-md-12">
             <div className="card">
-              <div className="header">
-                <h4></h4>
-              </div>
+             
               <div className="content">
                 <BootstrapTable
                   data={data}
@@ -189,8 +187,7 @@ class ServiceJobListTable extends Component {
                     filter={{ type: 'TextFilter' }}
                     width="30%">
                     Scheduled Service Job Date
-                  </TableHeaderColumn>
-                  <TableHeaderColumn width="20%"></TableHeaderColumn>
+                  </TableHeaderColumn>                  
                 </BootstrapTable>
               </div>
             </div>
