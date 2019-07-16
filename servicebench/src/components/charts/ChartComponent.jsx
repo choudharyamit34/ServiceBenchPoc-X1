@@ -16,18 +16,18 @@ class ChartComponent extends Component {
                 {/* <!-- Marketing Icons Section --> */}
                 <div className="row">
                     <div className="col-lg-8 mb-8 margin_left_minus_7_per margin_top_3_per">
-                        <div className="card h-100">
+                        <div className="card h-100 border_0">
                             <CarouselComponent />
                         </div>
                     </div>
-                    <div className="col-lg-4 mb-4">
-                        <div className="card h-100">
-                            <h4 className="card-header">Service Jobs</h4>
+                    <div className="col-lg-4 mb-4 margin_top_2_per ">
+                        <div className="card h-100 width_65_per">
+                            <h4 className="card-header ">Service Jobs</h4>
                             <CardColumns>
                                 <SjPieChart history={history} />
                             </CardColumns>
 
-                            <h4 className="card-header">Parts</h4>
+                            <h4 className="card-header ">Parts</h4>
                             <CardColumns>
                                 <PartsPieChart history={history} />
                             </CardColumns>
