@@ -42,10 +42,23 @@ class SjPieChart extends React.Component {
    console.log('history in handle click',this.history);
    const label= chartData._model.label;
    console.log('label clicked is ',label);
+   let fromPath='';
+   let spId='';
+   if (this.props.history.location.state != undefined && this.props.history.location.state != '') {
+    fromPath=this.history.location.state.fromPath;
+   spId=this.history.location.state.serviceProviderId;
+   }
+
+  
+  console.log('fromPath in SJ chart',fromPath);
+  console.log('SP Id  in SJ chart',spId);
 
    this.history.push({
     pathname: '/serviceJobs',
-    state: { serviceJobStatus: label }
+    state: { serviceJobStatus: label,
+      fromPath:fromPath,
+      spId:spId
+     }
   })
  }
   render() {

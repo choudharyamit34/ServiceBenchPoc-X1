@@ -34,15 +34,26 @@ class ServiceJobListTable extends Component {
     const history = this.props.history;
     // console.log('History in  sj list component',history);
     let serviceJobStatus = '';
+    let fromPath='';
+    let spId='';
     if (this.props.history.location.state != undefined && this.props.history.location.state != '') {
       serviceJobStatus = this.props.history.location.state.serviceJobStatus;
+      fromPath = this.props.history.location.state.fromPath;
+      spId = this.props.history.location.state.spId;
       console.log('Servicejob Status sj list component :-', serviceJobStatus);
     }
     const url = "http://localhost:3007/ServiceJobs";
     //serviceJobService.getAllServiceJobs(this.setStateFromApiResult);
-    if (serviceJobStatus != undefined && serviceJobStatus != '') {
+    if (serviceJobStatus != undefined && serviceJobStatus != '' && fromPath=='') {
       console.log('calling by status for status : -', serviceJobStatus);
       serviceJobService.getAllServicejobBySjStatus(serviceJobStatus).then((data) => {
+        this.setStateFromApiResult(data);
+      })
+    }
+    else if(fromPath=="SP" && serviceJobStatus != ''&&  serviceJobStatus != undefined && spId!='')
+    {
+      console.log('calling by SP id for status : -', spId, serviceJobStatus);
+      serviceJobService.getAllServicejobBySjStatusAndSPID(serviceJobStatus,spId).then((data) => {
         this.setStateFromApiResult(data);
       })
     }

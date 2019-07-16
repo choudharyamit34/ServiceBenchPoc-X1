@@ -59,7 +59,8 @@ import serviceProviderService from '../../../services/serviceProvider.service';
             const serviceProviderId = row.serviceProviderId;
             history.push({
               pathname: '/spDashboard',
-              state: { serviceProviderId: serviceProviderId }
+              state: { serviceProviderId: serviceProviderId ,
+               fromPath:'SP'}
             })
           }
         };

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import serviceJobService from '../../../services/serviceJob.service';
+import serviceProviderService from '../../../services/serviceProvider.service';
 import { Link } from 'react-router-dom';
 import { Icon, Popup } from 'semantic-ui-react';
 import '../../../Stylesheets/container.css';
+import '../css/serviceJobs.css';
 const data2 = {};
 class SjDetail extends Component {
     constructor() {
@@ -17,6 +19,7 @@ class SjDetail extends Component {
         const serviceJobNumber = this.props.history.location.state.serviceJobNumber
         console.log("service job number before fetch");
         console.log(serviceJobNumber);
+        let jobData={};
         serviceJobService.getAllServicejobBySjnumber(serviceJobNumber).then((data) => {
             this.setStateFromApiResult(data);
         });
@@ -42,6 +45,7 @@ class SjDetail extends Component {
 
     render() {
         var { data } = this.state;
+        // var {spDetails}=this.state.spDetails;
         //    const {data2}=data[0];
         console.log("data avialble in render ", data);
         console.log("service job number in render ");
@@ -55,14 +59,18 @@ class SjDetail extends Component {
             <div className="container-fluid container_position">
                 <br />
                 <div>
-                    <Link to={this.props.history.goBack}>
-                    <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
-                        className="colorLogo" onClick={this.props.history.goBack}/>}/>
-                    </Link>
-                </div>
-                <br />
+                    <td>
+                        <Link to={this.props.history.goBack}>
+                            <Popup content="Back" trigger={<Icon name='arrow circle left' size='big' 
+                                className="colorLogo" onClick={this.props.history.goBack}/>}/>
+                            </Link>                    
+                    </td>
+                    <td >
+                         {/* <Label  className='h2_details'> Service Job Details</Label> */}
+                   </td>
+                </div>               
                 <div >
-                    <table className='table table-bordered table-dark'>
+                    <table className='table table-bordered '>
                         <tbody>
                             <tr>
                                 <td > <b color={'grey'}>Service Job Number</b></td>
@@ -77,6 +85,11 @@ class SjDetail extends Component {
                                 <td><b color={'grey'}>Scheduled ServiceJob Date</b></td>
                                 <td>{data.scheduledServiceJobDate}</td>
                             </tr>
+                            <tr>
+                                <td><b color={'grey'}>service Provider Id </b></td>
+                                <td>{data.serviceProviderId}</td>
+                                
+                            </tr>                           
                             <tr>
                                 <td><b color={'grey'}>First Name</b></td>
                                 <td>{data.customerFirstName}</td>
@@ -107,6 +120,7 @@ class SjDetail extends Component {
                                 <td><b color={'grey'}>Addrerss Line 3 </b></td>
                                 <td>{data.addLine3}</td>
                             </tr>
+                       
 
                         </tbody>
                     </table>

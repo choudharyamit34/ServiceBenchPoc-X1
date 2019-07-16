@@ -12,18 +12,21 @@ import '../../../Stylesheets/container.css';
     // console.log('History in  sj list component',history);
     let serviceProviderId = '';
     var propsArray=[];
+    let fromPath='';
 
     if (this.props.history.location.state != undefined && this.props.history.location.state != '') {
         serviceProviderId = this.props.history.location.state.serviceProviderId;
+        fromPath= this.props.history.location.state.fromPath;
         propsArray.push({"serviceProviderId":serviceProviderId});
         propsArray.push({"history":history});
       console.log('serviceProviderId in sp dashboard component :-', serviceProviderId);
+      console.log('frompath in Sp dashbaord:-',fromPath);
     }
     console.log('props array ',propsArray);
     return (
-      <React.Fragment className="container-fluid container_position">
+      <React.Fragment >
         {/* <SpChartComponent   history={history} /> */}
-        <ChartComponent  history={history} />
+        <ChartComponent  history={history} serviceProviderId={serviceProviderId} fromPath={fromPath} />
       </React.Fragment>
     );
   }
