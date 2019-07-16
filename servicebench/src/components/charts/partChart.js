@@ -52,7 +52,7 @@ handleElementClick(clickData) {
     this.history={...history};
     return (
       <MDBContainer>        
-        <Pie data={this.state.dataPie} width={300} height={300}  options={{ responsive: false }} onElementsClick={this.handleElementClick}/>
+        <Pie data={this.state.dataPie} width={225} height={225}  options={{ responsive: false }} onElementsClick={this.handleElementClick}/>
       </MDBContainer>
     );
   }

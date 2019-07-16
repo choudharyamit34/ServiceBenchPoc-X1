@@ -67,8 +67,8 @@ class SjPieChart extends React.Component {
     this.history={...history};
     return (
       <MDBContainer>        
-        <Doughnut width={300}
-        height={300} data={this.state.dataPie} options={{ responsive: false }}   onElementsClick={this.handleElementClick} />
+        <Doughnut width={225}
+        height={225} data={this.state.dataPie} options={{ responsive: false }}   onElementsClick={this.handleElementClick} />
       </MDBContainer>
     );
   }

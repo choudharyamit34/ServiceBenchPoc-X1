@@ -8,13 +8,21 @@ class CarouselComponent extends Component {
             <Carousel showArrows={true} infiniteLoop useKeyboardArrows autoPlay className="presentation-mode"
             showThumbs={false}>
                 <div>
-                    <img src="../../../../public/assets/servicebench1.jpg" />
-                    <p className="legend"></p>
+                    <img src="../../../../public/assets/crsol-1.png" />                    
                 </div>
                 <div>
-                    <img src="../../../../public/assets/servicebench2.jpg" />
-                    <p className="legend"></p>
+                    <img src="../../../../public/assets/crsol-2.png" />                    
                 </div>
+                <div>
+                    <img src="../../../../public/assets/crsol-3.png" />                    
+                </div>
+                <div>
+                    <img src="../../../../public/assets/crsol-4.png" />                    
+                </div>
+                <div>
+                    <img src="../../../../public/assets/crsol-5.png" />                    
+                </div>
+                
             </Carousel>
         );
     }

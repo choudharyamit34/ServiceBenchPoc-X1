@@ -49,6 +49,9 @@ body{
 .margin_top_5_per{
     margin-top: 5%;
 }
+.margin_top_3_per{
+    margin-top: 3%;
+}
 .transition_0_3{
     transition: 0.3s;
 }
@@ -62,4 +65,10 @@ body{
 .btn_gray{
     background-color:gray;
     border-color: gray;    
+}
+.margin_left_minus_7_per{
+    margin-left: -7%;
+}
+.width_125_per{
+    width: 125%;
 }

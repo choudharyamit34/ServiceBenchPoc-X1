@@ -2,53 +2,41 @@ import React, { Component } from 'react';
 import SjPieChart from './sjChart';
 import ClaimPieChart from './claimChart';
 import PartsPieChart from './partChart';
-import {CardColumns} from 'reactstrap';
-import {Link} from 'react-router-dom';
+import { CardColumns } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import '../../Stylesheets/container.css';
+import SBCarasoul from "../carousel/SBCarasoul";
+import CarouselComponent from "../carousel/CarouselComponent";
 class ChartComponent extends Component {
     render() {
-        const {history}=this.props;
+        const { history } = this.props;
         // console.log('props in Chart component',history);
         return (
-            <div className="container-fluid container_position padding_top_15_px" >
+            <div className="container-fluid container_position padding_top_15_px width_125_per" >
                 {/* <!-- Marketing Icons Section --> */}
                 <div className="row">
+                    <div className="col-lg-8 mb-8 margin_left_minus_7_per margin_top_3_per">
+                        <div className="card h-100">
+                            <CarouselComponent />
+                        </div>
+                    </div>
                     <div className="col-lg-4 mb-4">
                         <div className="card h-100">
                             <h4 className="card-header">Service Jobs</h4>
                             <CardColumns>
-                                <SjPieChart history={history}/>
+                                <SjPieChart history={history} />
                             </CardColumns>
-                            <div className="card-footer">
-                                <Link to="/serviceJobs" className="btn btn-primary">Show More</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 mb-4">
-                        <div className="card h-100">
-                            <h4 className="card-header">Claims</h4>
-                            <CardColumns>
-                                <ClaimPieChart history={history} />
-                            </CardColumns>
-                            <div className="card-footer">
-                            <Link to="/claims" className="btn btn-primary">Show More</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 mb-4">
-                        <div className="card h-100">
+
                             <h4 className="card-header">Parts</h4>
                             <CardColumns>
-                                <PartsPieChart  history={history}/>
+                                <PartsPieChart history={history} />
                             </CardColumns>
-                            <div className="card-footer">
-                            <Link to="/parts" className="btn btn-primary">Show More</Link>
-                            </div>
                         </div>
                     </div>
+
                 </div>
-                
-                </div>
+
+            </div>
         );
     }
 }

@@ -11,8 +11,6 @@ export default class Dashboard extends Component {
     return (
       <React.Fragment>
         <div className="body">
-        {/* <NavgationComponent /> commented to show header menu*/}
-        {/* <CarouselComponent/> */}
          <ChartComponent history={history}/>
          </div>
       </React.Fragment>
