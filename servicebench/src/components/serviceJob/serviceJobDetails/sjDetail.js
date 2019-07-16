@@ -65,8 +65,8 @@ class SjDetail extends Component {
                                 className="colorLogo" onClick={this.props.history.goBack}/>}/>
                             </Link>                    
                     </td>
-                    <td >
-                         {/* <Label  className='h2_details'> Service Job Details</Label> */}
+                    <td className="h2_td_details" >
+                         <h2  className='h2_details'> Service Job Details</h2> 
                    </td>
                 </div>               
                 <div >
@@ -88,6 +88,8 @@ class SjDetail extends Component {
                             <tr>
                                 <td><b color={'grey'}>service Provider Id </b></td>
                                 <td>{data.serviceProviderId}</td>
+                                <td></td>
+                                <td></td>
                                 
                             </tr>                           
                             <tr>

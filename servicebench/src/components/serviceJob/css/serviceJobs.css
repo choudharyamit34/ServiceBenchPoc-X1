@@ -1,0 +1,38 @@
+.page_Label{
+    margin-left:100%;
+    min-width: 100%;
+    font-size: 22px;
+}
+table.table-bordered{
+    border:1px solid grey;
+    margin-top:20px;
+  }
+table.table-bordered > thead > tr > th{
+    border:2px solid grey;
+}
+table.table-bordered > tbody > tr {
+    border:2px solid black;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid grey;
+}
+
+table.table-bordered > tbody >tr>td:nth-child(odd) {
+    background-color: grey;
+}
+table.table-bordered > tbody >tr>td:nth-child(even) {
+    background-color: #ccff33;
+}
+
+.h2_td_caption_jobs{   
+    width: 90% !important;
+}
+.h2_caption_jobs{
+    margin-left: 50% !important;
+}
+.h2_td_details{   
+    width: 130% !important;
+}
+.h2_details{
+    margin-left: 30% !important;
+}

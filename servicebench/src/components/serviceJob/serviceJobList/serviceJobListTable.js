@@ -4,6 +4,7 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import serviceJobService from '../../../services/serviceJob.service';
 import { Icon, Popup } from 'semantic-ui-react';
 import '../../../Stylesheets/container.css';
+import '../css/serviceJobs.css';
 
 const data = [];
 var tableCaptionCentred = {
@@ -111,7 +112,9 @@ class ServiceJobListTable extends Component {
                         className="colorLogo" />}/>          
           </Link>
           </td>  
-          <td style={tableCaptionCentred}>  <h2>Service Jobs</h2>   </td>              
+          <td className="h2_td_caption_jobs" >
+            <h2  className='h2_caption_jobs'> Service Jobs</h2> 
+          </td>             
         </div>
         <br />
         <div className="row">
