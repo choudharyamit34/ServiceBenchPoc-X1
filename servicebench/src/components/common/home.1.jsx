@@ -7,7 +7,7 @@ class Home1 extends Component {
     const {history}=this.props;
     // console.log('props in Home',history);
     return ( 
-        <div className='container container_position'>
+        <div className='container corosal_container_position '>
         <Dashboard history={history}/>
       </div>
     )
