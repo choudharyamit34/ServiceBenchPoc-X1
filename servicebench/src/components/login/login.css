@@ -35,7 +35,7 @@
     min-height: 22%;
     background-color: black;
     width:20.5%;
-    height:57% ;
+    height:58% ;
 }
 .greyback {
     background: #39342e;
@@ -73,3 +73,8 @@
   position:fixed;
   /* top: 0; */
 }
+.logo_no_background_repeat{
+    background-repeat: no-repeat !important ;
+    position:fixed;
+    /* top: 0; */
+  }
