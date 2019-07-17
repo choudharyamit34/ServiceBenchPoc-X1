@@ -9,6 +9,7 @@ import SBCarasoul from "../carousel/SBCarasoul";
 import CarouselComponent from "../carousel/CarouselComponent";
 class ChartComponent extends Component {
     render() {
+        
         const { history } = this.props;
         // console.log('props in Chart component',history);
         return (
