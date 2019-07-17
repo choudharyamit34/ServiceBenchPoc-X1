@@ -13,8 +13,8 @@ nav{
 img{
     margin: 0 auto;
     padding:10px;
-    width:1100px;
-    height: 550px;
+    width:1000px;
+    height:580px;
 }
 #scheduleList{
     margin:30px;
@@ -66,18 +66,24 @@ body{
     background-color:gray;
     border-color: gray;    
 }
+.margin_left_minus_6_per{
+    margin-left: -6%;
+}
 .margin_left_minus_7_per{
-    margin-left: -7%;
+    margin-left: -13%;
 }
 .width_125_per{
-    width: 125%;
+    width: 140%;
 }
 .width_65_per{
-    width: 65%;
+    width: 80%;
 }
 .margin_top_2_per{
-    margin-top: 2%;
+    margin-top: 3%;
 }
 .border_0{
     border: 0px;
+}
+body{
+    overflow: hidden;
 }

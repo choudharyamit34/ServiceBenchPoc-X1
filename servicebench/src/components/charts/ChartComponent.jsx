@@ -13,7 +13,7 @@ class ChartComponent extends Component {
         const { history } = this.props;
         // console.log('props in Chart component',history);
         return (
-            <div className="container-fluid container_position padding_top_15_px width_125_per" >
+            <div className="container-fluid corosal_container_position padding_top_15_px width_125_per" >
                 {/* <!-- Marketing Icons Section --> */}
                 <div className="row">
                     <div className="col-lg-8 mb-8 margin_left_minus_7_per margin_top_3_per">
@@ -29,7 +29,7 @@ class ChartComponent extends Component {
                             </CardColumns>
 
                             <h4 className="card-header ">Parts</h4>
-                            <CardColumns>
+                            <CardColumns className="margin_left_minus_6_per">
                                 <PartsPieChart history={history} />
                             </CardColumns>
                         </div>

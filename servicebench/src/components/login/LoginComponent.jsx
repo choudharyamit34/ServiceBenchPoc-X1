@@ -8,11 +8,11 @@ import loginBgImagePNG from '../../resources/imgs/SB_picture_png-3.png';
 import LogoImage from '../../resources/imgs/SB_logo.png';
 
 var logoStyle = {
-    background: `url(${LogoImage})`,
+    background: `url(${LogoImage}) no-repeat`,
     width: `22.5%`,
     height: 80,
     marginTop: `-22px`,
-    cursor: 'pointer'   
+    cursor: 'pointer'
 
 }
 var loginBgStyle = {
@@ -130,7 +130,7 @@ class LoginComponent extends Component {
 
         return (
             <div style={loginBgStyle} className="image_no_background_repeat">  
-              <div style={logoStyle}></div>
+              <div style={logoStyle}  ></div>
                 <div className="loginwidget">
                  {this.state.message ? <h4 className="alert alert-danger">{this.state.message}</h4> : null}
                     <Form onSubmit={this.login}>
