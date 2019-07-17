@@ -25,8 +25,8 @@ import '../../../Stylesheets/container.css';
     console.log('props array ',propsArray);
     return (
       <React.Fragment >
-        {/* <SpChartComponent   history={history} /> */}
-        <ChartComponent  history={history} serviceProviderId={serviceProviderId} fromPath={fromPath} />
+         <SpChartComponent    history={history} serviceProviderId={serviceProviderId} fromPath={fromPath}/> 
+        {/* <ChartComponent  history={history} serviceProviderId={serviceProviderId} fromPath={fromPath} /> */}
       </React.Fragment>
     );
   }
