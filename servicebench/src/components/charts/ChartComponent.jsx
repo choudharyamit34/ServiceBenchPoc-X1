@@ -24,7 +24,7 @@ class ChartComponent extends Component {
                     <div className="col-lg-4 mb-4 margin_top_2_per ">
                         <div className="card h-100 width_65_per">
                             <h4 className="card-header ">Service Jobs</h4>
-                            <CardColumns>
+                            <CardColumns className="margin_left_minus_6_per">
                                 <SjPieChart history={history} />
                             </CardColumns>
 

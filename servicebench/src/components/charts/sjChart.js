@@ -62,13 +62,27 @@ class SjPieChart extends React.Component {
   })
  }
   render() {
+    console.log('Props in Sj chart',this.props)
     const {history}=this.props;
-    console.log('props in sj chart',history);
+    console.log('History in sj chart',history);
     this.history={...history};
+    let height=210;
+   let  width=300;
+    if(this.props.height!=undefined && this.props.height!='')
+    {
+      
+      height=this.props.height;
+    }
+    if(this.props.width!=undefined && this.props.width!='')
+    {
+      width=this.props.width;
+    }
+    console.log('Height recieved as props in sj chart',height);
+    console.log('width recieved as props in sj chart',width);
     return (
       <MDBContainer>        
-        <Doughnut width={300}
-        height={225} data={this.state.dataPie} options={{ responsive: false }}   onElementsClick={this.handleElementClick} />
+        <Doughnut width={width}
+        height={height} data={this.state.dataPie} options={{ responsive: false }}   onElementsClick={this.handleElementClick} />
       </MDBContainer>
     );
   }

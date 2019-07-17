@@ -57,6 +57,20 @@ const serviceJobService = {
             })
         });
         return promise;
+    },
+    getAllServicejobBySPID: function (spId) {
+        var promise = new Promise((resolve, reject) => {
+            fetch(`http://localhost:3001/ServiceJobs?serviceProviderId=${spId}`).then((response) => {
+                response.json().then((data) => {
+                    resolve(data);
+                }, (err) => {
+                    reject("Parsing Error...");
+                })
+            }, (err) => {
+                reject("Communication Error...");
+            })
+        });
+        return promise;
     }
 }
 

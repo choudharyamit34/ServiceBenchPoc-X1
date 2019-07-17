@@ -49,10 +49,24 @@ handleElementClick(clickData) {
 
   render() {
     const {history}=this.props;
+    console.log('history in part chart render ',history);
     this.history={...history};
+    let height=225;
+    let  width=320;
+     if(this.props.height!=undefined && this.props.height!='')
+     {
+       
+       height=this.props.height;
+     }
+     if(this.props.width!=undefined && this.props.width!='')
+     {
+       width=this.props.width;
+     }
+     console.log('Height recieved as props in sj chart',height);
+     console.log('width recieved as props in sj chart',width);
     return (
       <MDBContainer>        
-        <Pie data={this.state.dataPie} width={350} height={250}  options={{ responsive: false }} onElementsClick={this.handleElementClick}/>
+        <Pie data={this.state.dataPie} width={width} height={height}  options={{ responsive: false }} onElementsClick={this.handleElementClick}/>
       </MDBContainer>
     );
   }

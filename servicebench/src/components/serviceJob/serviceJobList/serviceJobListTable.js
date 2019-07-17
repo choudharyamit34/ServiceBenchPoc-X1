@@ -57,6 +57,13 @@ class ServiceJobListTable extends Component {
         this.setStateFromApiResult(data);
       })
     }
+    else if(fromPath=="SP" && spId!='')
+    {
+      console.log('calling by SP id for sp id : -', spId);
+      serviceJobService.getAllServicejobBySPID(spId).then((data) => {
+        this.setStateFromApiResult(data);
+      })
+    }
     else {
       console.log('Searching all Service job: -', serviceJobStatus);
       serviceJobService.getAllServiceJobs().then((data) => {
