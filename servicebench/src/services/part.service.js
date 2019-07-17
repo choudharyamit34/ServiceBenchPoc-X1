@@ -1,7 +1,7 @@
 const partService = {
     getAllParts: function () {
         var promise = new Promise((resolve, reject) => {
-            fetch('http://localhost:3007/parts').then((response) => {
+            fetch('http://localhost:3003/parts').then((response) => {
                 response.json().then((data) => {
                     resolve(data);
                 }, (err) => {
@@ -15,7 +15,7 @@ const partService = {
     },
     getPartById: function (id) {
         var promise = new Promise((resolve, reject) => {
-            fetch(`http://localhost:3007/parts?id=${id}`).then((response) => {
+            fetch(`http://localhost:3003/parts?id=${id}`).then((response) => {
                 response.json().then((data) => {
                     resolve(data);
                 }, (err) => {
@@ -29,7 +29,7 @@ const partService = {
     },
     getPartsByStatus: function (partStatus) {
         var promise = new Promise((resolve, reject) => {
-            fetch(`http://localhost:3007/parts?partStatus=${partStatus}`).then((response) => {
+            fetch(`http://localhost:3003/parts?partStatus=${partStatus}`).then((response) => {
                 response.json().then((data) => {
                     resolve(data);
                 }, (err) => {

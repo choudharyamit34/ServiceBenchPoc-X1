@@ -1,7 +1,7 @@
 const claimService = {
     getAllClaims: function () {
         var promise = new Promise((resolve, reject) => {
-            fetch('http://localhost:3007/Claims').then((response) => {
+            fetch('http://localhost:3002/Claims').then((response) => {
                 response.json().then((data) => {
                     resolve(data);
                 }, (err) => {
@@ -15,7 +15,7 @@ const claimService = {
     },
     getClaimByClaimNumber: function (claimNumber) {
         var promise = new Promise((resolve, reject) => {
-            fetch(`http://localhost:3007/Claims?claimNumber=${claimNumber}`).then((response) => {
+            fetch(`http://localhost:3002/Claims?claimNumber=${claimNumber}`).then((response) => {
                 response.json().then((data) => {
                     resolve(data);
                 }, (err) => {
@@ -29,7 +29,7 @@ const claimService = {
     },
     getClaimsByClaimStatus: function (claimStatus) {
         var promise = new Promise((resolve, reject) => {
-            fetch(`http://localhost:3007/Claims?claimStatus=${claimStatus}`).then((response) => {
+            fetch(`http://localhost:3002/Claims?claimStatus=${claimStatus}`).then((response) => {
                 response.json().then((data) => {
                     resolve(data);
                 }, (err) => {

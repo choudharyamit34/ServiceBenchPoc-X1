@@ -1,7 +1,7 @@
 const serviceJobService = {
     getAllServiceJobs: function (cb) {
         var promise = new Promise((resolve, reject) => {
-            fetch('http://localhost:3007/ServiceJobs').then((response) => {
+            fetch('http://localhost:3001/ServiceJobs').then((response) => {
                 console.log("response",response);
                 response.json().then((data) => {
                     console.log("data recived in getAllServiceJobs ",data);
@@ -17,7 +17,7 @@ const serviceJobService = {
     },
     getAllServicejobBySjnumber: function (serviceJobNumber) {
         var promise = new Promise((resolve, reject) => {
-            fetch(`http://localhost:3007/ServiceJobs?serviceJobNumber=${serviceJobNumber}`).then((response) => {
+            fetch(`http://localhost:3001/ServiceJobs?serviceJobNumber=${serviceJobNumber}`).then((response) => {
                 response.json().then((data) => {
                     resolve(data);
                 }, (err) => {
@@ -32,7 +32,7 @@ const serviceJobService = {
     ,
     getAllServicejobBySjStatus: function (serviceJobStatus) {
         var promise = new Promise((resolve, reject) => {
-            fetch(`http://localhost:3007/ServiceJobs?serviceJobStatus=${serviceJobStatus}`).then((response) => {
+            fetch(`http://localhost:3001/ServiceJobs?serviceJobStatus=${serviceJobStatus}`).then((response) => {
                 response.json().then((data) => {
                     resolve(data);
                 }, (err) => {
@@ -46,7 +46,7 @@ const serviceJobService = {
     },
     getAllServicejobBySjStatusAndSPID: function (serviceJobStatus,spId) {
         var promise = new Promise((resolve, reject) => {
-            fetch(`http://localhost:3007/ServiceJobs?serviceJobStatus=${serviceJobStatus}&serviceProviderId=${spId}`).then((response) => {
+            fetch(`http://localhost:3001/ServiceJobs?serviceJobStatus=${serviceJobStatus}&serviceProviderId=${spId}`).then((response) => {
                 response.json().then((data) => {
                     resolve(data);
                 }, (err) => {

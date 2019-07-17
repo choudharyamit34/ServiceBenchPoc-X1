@@ -42,7 +42,7 @@ const Header = () => (
                     <li className="nav-item headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link transition_0_3' to='/claims'>
                         <Icon name='file alternate' size='big' className="colorLogo" /><br />Claims</Link></li>
                     <li className="nav-item headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link transition_0_3' to='/serviceProviders'>
-                        <Icon name='users' size='big' className="colorLogo" /><br />Service Providers</Link></li>
+                        <Icon name='users' size='big' className="colorLogo" /><br />Servicers</Link></li>
                     <li className="nav-item headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link transition_0_3' to='/home'>
                         <Icon name='handshake' size='big' className="colorLogo" /><br />Contracts</Link></li>
                     <li className="nav-item headerIcon"  style={{ textAlign: "center" }}><Link className='nav-link transition_0_3' to='/home'>

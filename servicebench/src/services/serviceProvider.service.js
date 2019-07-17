@@ -1,7 +1,7 @@
 const serviceProviderService = {
     getServiceProviders: function (cb) {
         var promise = new Promise((resolve, reject) => {
-            fetch('http://localhost:3007/serviceProviders').then((response) => {
+            fetch('http://localhost:3005/serviceProviders').then((response) => {
                 console.log("response",response);
                 response.json().then((data) => {
                     console.log("data recived in getServiceProviders ",data);
@@ -17,7 +17,7 @@ const serviceProviderService = {
     },
     getServiceProviderbySPID: function (spId) {
         var promise = new Promise((resolve, reject) => {
-            fetch(`http://localhost:3007/serviceProviders?serviceProviderId=${spId}`).then((response) => {
+            fetch(`http://localhost:3005/serviceProviders?serviceProviderId=${spId}`).then((response) => {
                 console.log("response",response);
                 response.json().then((data) => {
                     console.log("data recived in getServiceProvidersBySpID ",data);
