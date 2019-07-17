@@ -3,20 +3,27 @@
     min-width: 100%;
     font-size: 22px;
 }
+/*START - Pagination Position of Data table on Sj list page  */
+
+.col-lg-6{
+    max-width: 41% !important;
+}
+
+/*END - Pagination Position of Data table on Sj list page  */
 /*START - Table hiver for Headers of Data table on Sj list page  */
 .table{
     margin-bottom: 0px !important;
     margin-top:0px !important;
 }
 table.table-hover{
-    border:1px solid black;
+    border:1px solid grey;
     margin-top:1px;
   }
 table.table-hover > thead > tr > th{
     border:1px solid  grey;
 }
 table.table-hover > tbody > tr {
-    border:1px solid grey;
+    border:2px solid #b3ffec;
 }
 table.table-hover > tbody > tr > td{
     border:1px solid grey;
@@ -25,7 +32,7 @@ table.table-hover > tbody > tr > td{
 /*END - Table hover for Headers of Data table on Sj list page */
 /*START - Table stripped for Body of Data table on Sj list page  */
 table.table-striped{
-    border:1px solid black;
+    border:1px solid #66ffff;
     margin-top:0px;
   }
 table.table-striped > thead > tr > th{
@@ -56,10 +63,11 @@ table.table-bordered > tbody > tr > td{
 
 /*START - Custom Background colors for table on  Sj detailspage */
 table.table-bordered > tbody >tr>td:nth-child(odd) {
-    
+    background-color:#E0E0E0;
+    border:2px solid
 }
 table.table-bordered > tbody >tr>td:nth-child(even) {
-   
+   border:2px solid black
 }
 table.table-bordered > tbody >tr>td:nth-child(odd)>b {
     font-size: 15px;
