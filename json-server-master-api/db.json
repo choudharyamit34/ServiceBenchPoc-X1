@@ -241,7 +241,7 @@
       "homePhone": "8600041937"
     },
     {
-      "id":13,
+      "id": 13,
       "serviceJobNumber": "SJKL-13",
       "serviceJobType": "R",
       "serviceJobStatus": "Expired",
@@ -281,7 +281,7 @@
       "homePhone": "8600041937"
     },
     {
-      "id":15,
+      "id": 15,
       "serviceJobNumber": "SJKL-15",
       "serviceJobType": "W",
       "serviceJobStatus": "New",
@@ -439,8 +439,8 @@
       "addLine3": "Rahatani",
       "mobilePhone": "8600041937",
       "homePhone": "8600041937"
-    }
-    ,{
+    },
+    {
       "id": 23,
       "serviceJobNumber": "SJKL-23",
       "serviceJobType": "W",
@@ -659,6 +659,26 @@
       "addLine3": "Rahatani",
       "mobilePhone": "8600041937",
       "homePhone": "8600041937"
+    },
+    {
+      "serviceJobNumber": "SJKL-225",
+      "serviceJobType": "R",
+      "serviceJobStatus": "New",
+      "serviceJobId": "SJ225",
+      "serviceJobDate": "7/17/2019",
+      "scheduledServiceJobDate": "7/18/2019",
+      "serviceProviderId": "100003",
+      "customerFirstName": "amit",
+      "customerLastName": "amit",
+      "city": "amit",
+      "state": "amit",
+      "postalCode": "amit",
+      "addLine1": "amit",
+      "addLine2": "amit",
+      "addLine3": "amit",
+      "mobilePhone": "8600041937",
+      "homePhone": "",
+      "id": 34
     }
   ],
   "claims": [
@@ -669,7 +689,7 @@
       "claimId": "CLM1",
       "claimDate": "23/08/2019",
       "claimSubmittedDate": "25/06/2018",
-      "claimStatus":"Approved",
+      "claimStatus": "Approved",
       "serviceProviderId": "100001",
       "customerFirstName": "Piyush",
       "customerLastName": "Kumar",
@@ -687,7 +707,7 @@
       "claimNumber": "CLM-2",
       "claimType": "S",
       "claimId": "CLM2",
-      "claimStatus":"Approved",
+      "claimStatus": "Approved",
       "claimDate": "23/08/2019",
       "claimSubmittedDate": "25/06/2018",
       "serviceProviderId": "100001",
@@ -708,7 +728,7 @@
       "claimType": "W",
       "claimId": "CLM3",
       "claimDate": "23/08/2019",
-      "claimStatus":"Rejected",
+      "claimStatus": "Rejected",
       "claimSubmittedDate": "25/06/2018",
       "serviceProviderId": "100002",
       "customerFirstName": "Jeetesh",
@@ -728,7 +748,7 @@
       "claimType": "W",
       "claimId": "CLM4",
       "claimDate": "23/08/2019",
-      "claimStatus":"Review",
+      "claimStatus": "Review",
       "claimSubmittedDate": "25/06/2018",
       "serviceProviderId": "100003",
       "customerFirstName": "Prabhu",
@@ -747,7 +767,7 @@
       "claimNumber": "CLM-5",
       "claimType": "W",
       "claimId": "CLM5",
-      "claimStatus":"Review",
+      "claimStatus": "Review",
       "claimDate": "23/08/2019",
       "claimSubmittedDate": "25/06/2018",
       "serviceProviderId": "100003",
@@ -768,7 +788,7 @@
       "claimType": "W",
       "claimId": "CLM5",
       "claimDate": "23/08/2019",
-      "claimStatus":"Completed",
+      "claimStatus": "Completed",
       "claimSubmittedDate": "25/06/2018",
       "serviceProviderId": "100002",
       "customerFirstName": "amit",
@@ -789,7 +809,7 @@
       "claimId": "CLM5",
       "claimDate": "23/08/2019",
       "claimSubmittedDate": "25/06/2018",
-      "claimStatus":"Paid",
+      "claimStatus": "Paid",
       "serviceProviderId": "100001",
       "customerFirstName": "amit",
       "customerLastName": "Sharma",
@@ -808,7 +828,7 @@
       "claimType": "W",
       "claimId": "CLM5",
       "claimDate": "23/08/2019",
-      "claimStatus":"Paid",
+      "claimStatus": "Paid",
       "claimSubmittedDate": "25/06/2018",
       "serviceProviderId": "100004",
       "customerFirstName": "amit",
@@ -828,7 +848,7 @@
       "claimType": "W",
       "claimId": "CLM5",
       "claimDate": "23/08/2019",
-      "claimStatus":"Transferred",
+      "claimStatus": "Transferred",
       "claimSubmittedDate": "25/06/2018",
       "serviceProviderId": "100004",
       "customerFirstName": "amit",
@@ -848,7 +868,7 @@
       "claimType": "W",
       "claimId": "CLM5",
       "claimDate": "23/08/2019",
-      "claimStatus":"Transferred",
+      "claimStatus": "Transferred",
       "claimSubmittedDate": "25/06/2018",
       "serviceProviderId": "100002",
       "customerFirstName": "amit",
@@ -868,7 +888,7 @@
       "claimType": "W",
       "claimId": "CLM5",
       "claimDate": "23/08/2019",
-      "claimStatus":"Review",
+      "claimStatus": "Review",
       "claimSubmittedDate": "25/06/2018",
       "serviceProviderId": "100003",
       "customerFirstName": "amit",
@@ -1005,14 +1025,12 @@
       "id": 2,
       "userName": "amit12",
       "password": "amit12"
-    }
-    ,
+    },
     {
       "id": 3,
       "userName": "piyush",
       "password": "piyush"
-    }
-    ,
+    },
     {
       "id": 4,
       "userName": "jeetesh",
