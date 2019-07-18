@@ -88,3 +88,7 @@ body{
 body{
     overflow: hidden;
 }
+
+.overflow_visible{
+    overflow: visible;
+}

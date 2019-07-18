@@ -115,9 +115,14 @@ class ServiceJobInput extends Component {
         }
     }
 
+    componentWillUnmount() {
+        $("body").removeClass("overflow_visible");
+    }
+
     render() {
         const { validated } = this.state;
         this.history = { ...this.props.history };
+        $("body").addClass("overflow_visible");
         return (
             <div className="container-fluid container_position">
                 <br />
