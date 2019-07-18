@@ -15,6 +15,7 @@ import LoginComponent from '../login/LoginComponent';
 import ServiceProvider from '../serviceProviders/jsx/serviceProvider';
 import SpDashBoard from '../serviceProviders/jsx/spDashBoard';
 import LogoutComponent from '../logout/LogoutComponent';
+import SBCarasoul from '../carousel/SBCarasoul';
 
 const Body = () => (
 
@@ -33,6 +34,7 @@ const Body = () => (
     <Route path='/partDetail' component={PartDetail} history={history} />
     <Route path='/addServiceJob' component = {ServiceJobInput} history={history}/> 
     <Route path='/logout' component = {LogoutComponent} history={history}/>
+    <Route path='/aboutUs' component = {SBCarasoul} history={history}/>
     <Route path='*' component={PageNotFound} />
   </Switch>
 )
