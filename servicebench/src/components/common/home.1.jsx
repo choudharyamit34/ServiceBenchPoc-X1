@@ -1,39 +1,17 @@
-import React from 'react';
-import ChartsPage from './pieChart';
-import SjPieChart from '../charts/sjChart';
-
-
-import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
-    CardSubtitle, CardBody} from 'reactstrap';
+import React ,{Component} from 'react';
 import Dashboard from '../../app/Dashboard';
 
-
-const Home1 = () => (
-    <div className='container'>
-      <Dashboard/>
-    
-{/* 
-      <CardColumns>
-      <Card>          
-        <CardBody>
-          <CardTitle>Service Jobs</CardTitle>
-          <ChartsPage />
-        </CardBody>
-      </Card>
-      <Card>
-          <CardBody>
-          <CardTitle>Claims</CardTitle>
-           <SjPieChart />
-          </CardBody>
-      
-      </Card>
-          
-    </CardColumns>
-    */}
-
-
-
-    </div>
-)
-
+import '../../Stylesheets/container.css';
+class Home1 extends Component {
+  render() {
+    const {history}=this.props;
+    // console.log('props in Home',history);
+    return ( 
+        <div className='container corosal_container_position '>
+        <Dashboard history={history}/>
+      </div>
+    )
+  }
+}
+  
 export default Home1;

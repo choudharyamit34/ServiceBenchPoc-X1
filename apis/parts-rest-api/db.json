@@ -1,0 +1,114 @@
+{
+ "parts": [
+ {
+      "id": 1,
+      "partNumber": "PART-01",
+      "serviceProviderId": "100001",
+      "partType": "L",
+      "partStatus": "Ordered",
+      "serialNumber": "1000245",
+      "modelNumber": "MDL123",
+      "cost": 65.45
+    },
+    {
+      "id": 2,
+      "partNumber": "PART-02",
+      "serviceProviderId": "100001",
+      "partType": "P",
+      "partStatus": "Shipped",
+      "cost": 125.4,
+      "serialNumber": "100205",
+      "modelNumber": "MDL234"
+    },
+    {
+      "id": 3,
+      "partNumber": "PART-03",
+      "serviceProviderId": "100001",
+      "partType": "L",
+      "partStatus": "In Transit",
+      "cost": 243.14,
+      "serialNumber": "103405",
+      "modelNumber": "MDL23445"
+    },
+    {
+      "id": 4,
+      "partNumber": "PART-04",
+      "serviceProviderId": "100002",
+      "partType": "P",
+      "partStatus": "In Depot",
+      "cost": 365.45,
+      "serialNumber": "107805",
+      "modelNumber": "MDL674"
+    },
+    {
+      "id": 5,
+      "partNumber": "PART-05",
+      "serviceProviderId": "100003",
+      "partType": "O",
+      "partStatus": "Not In Stock",
+      "cost": 95.45,
+      "serialNumber": "157205",
+      "modelNumber": "MDL9345"
+    },
+    {
+      "id": 6,
+      "partNumber": "PART-06",
+      "serviceProviderId": "100003",
+      "partType": "O",
+      "partStatus": "Not In Stock",
+      "cost": 95.45,
+      "serialNumber": "45205",
+      "modelNumber": "MDL123DFS"
+    },
+    {
+      "id": 7,
+      "partNumber": "PART-07",
+      "serviceProviderId": "100002",
+      "partType": "L",
+      "partStatus": "Not In Stock",
+      "cost": 95.45,
+      "serialNumber": "100205",
+      "modelNumber": "MDL234SDF"
+    },
+    {
+      "id": 8,
+      "partNumber": "PART-08",
+      "serviceProviderId": "100001",
+      "partType": "L",
+      "partStatus": "Not In Stock",
+      "cost": 95.45,
+      "serialNumber": "100205",
+      "modelNumber": "MDL234"
+    },
+    {
+      "id": 9,
+      "partNumber": "PART-09",
+      "serviceProviderId": "100002",
+      "partType": "M",
+      "partStatus": "Not In Stock",
+      "cost": 95.45,
+      "serialNumber": "100203455",
+      "modelNumber": "MDL234EDF12"
+    },
+    {
+      "id": 10,
+      "partNumber": "PART-10",
+      "serviceProviderId": "10004",
+      "partType": "N",
+      "partStatus": "Not In Stock",
+      "cost": 95.45,
+      "serialNumber": "100205123",
+      "modelNumber": "MDL234AAAS12"
+    },
+    {
+      "id": 11,
+      "partNumber": "PART-11",
+      "serviceProviderId": "100002",
+      "partType": "N",
+      "partStatus": "Not In Stock",
+      "cost": 95.45,
+      "serialNumber": "1002051234",
+      "modelNumber": "MDL234SDF657"
+    }
+  ]
+}

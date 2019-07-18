@@ -1,0 +1,27 @@
+.logo {
+    background: url('../resources/imgs/SB_logo.png') top left no-repeat;
+    width: 305px;
+    height: 94px;
+}
+
+.headerIcon:hover {
+    font-size: larger
+}
+
+.colorLogo {
+    color: #ecb215
+}
+
+.height_75_px {
+    height: 75px;
+}
+
+.header_position {
+    position: fixed !important;
+    width: 100%;
+    top:1% !important;
+    z-index: 1;
+}
+.logout_position {
+    position: fixed !important;
+}

@@ -13,3 +13,26 @@ npm install --save mdbreact
 run npm install react-bootstrap-table-next --save 
 # then import below mentioned script in component in which you want to use 
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+
+# to load images
+npm install --save-dev file-loader
+and add loader in webpack-common.js
+
+#to load Carousel
+npm install --save react-responsive-carousel
+
+#to load icons
+npm install --save semantic-ui-react
+
+#to load react-bootstrap form
+#v1.0.0-beta.9 is compatible with bootstrap 4
+npm install --save react-bootstrap
+
+## for react bar chart 
+npm install --save react-bar-chart
+
+##for react bootstrap Modal ..exp : logout popout confirmation box.
+npm install --save react-bootstrap-modal
+
+##for react datepicker
+npm install --save react-datepicker

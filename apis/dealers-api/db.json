@@ -1,0 +1,70 @@
+{
+
+  "serviceProviders": [
+    {
+      "serviceProviderId": "100001",
+      "customerFirstName": "amit",
+      "customerLastName": "Sharma",
+      "city": "pune",
+      "state": "MH",
+      "postalCode": "411033",
+      "addLine1": "Street 1",
+      "addLine2": "XYZ Road",
+      "addLine3": "Rahatani",
+      "mobilePhone": "8600041937",
+      "homePhone": "8600041937"
+    },
+    {
+      "serviceProviderId": "100002",
+      "customerFirstName": "Jeetesh",
+      "customerLastName": "Ambaraha",
+      "city": "pune",
+      "state": "MH",
+      "postalCode": "411024",
+      "addLine1": "Street 1",
+      "addLine2": "XYZ Road",
+      "addLine3": "Rahatani",
+      "mobilePhone": "8600041937",
+      "homePhone": "8600041937"
+    },
+    {
+      "serviceProviderId": "100003",
+      "customerFirstName": "Piyush",
+      "customerLastName": "Deulkar",
+      "city": "pune",
+      "state": "MH",
+      "postalCode": "411057",
+      "addLine1": "Street 1",
+      "addLine2": "XYZ Road",
+      "addLine3": "Rahatani",
+      "mobilePhone": "8600041937",
+      "homePhone": "8600041937"
+    },
+    {
+      "serviceProviderId": "100004",
+      "customerFirstName": "Utkarsh",
+      "customerLastName": "Khanase",
+      "city": "pune",
+      "state": "MH",
+      "postalCode": "411027",
+      "addLine1": "Street 1",
+      "addLine2": "XYZ Road",
+      "addLine3": "Rahatani",
+      "mobilePhone": "8600041937",
+      "homePhone": "8600041937"
+    },
+    {
+      "serviceProviderId": "100005",
+      "customerFirstName": "Mohit",
+      "customerLastName": "Saini",
+      "city": "pune",
+      "state": "MH",
+      "postalCode": "411057",
+      "addLine1": "Street 1",
+      "addLine2": "XYZ Road",
+      "addLine3": "Rahatani",
+      "mobilePhone": "8600041937",
+      "homePhone": "8600041937"
+    }
+  ]
+}

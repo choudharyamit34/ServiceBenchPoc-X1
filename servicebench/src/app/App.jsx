@@ -4,13 +4,19 @@ import Body from '../components/templates/Body';
 import Footer from '../components/templates/Footer';
 import '../Stylesheets/mystyles.css';
 
-const App = () => (
-    <div>
-        <Header />
-        <Body />
-        <Footer />
-    </div>
-)
-
-
-export default App;
+class App extends Component {
+ 
+    render() {
+   
+      let navHeader =  window.location.pathname !=='/login' ? <Header /> : '';
+         return (
+         <div>
+          {navHeader}
+          <Body />
+          <Footer />
+         </div>
+         );
+     }
+ }
+ 
+ export default App;
